@@ -1,0 +1,3 @@
+/home/arian/vscodeprojects/AP-PRoject/CMakeFiles/rebuild_cache.dir
+/home/arian/vscodeprojects/AP-PRoject/CMakeFiles/edit_cache.dir
+/home/arian/vscodeprojects/AP-PRoject/CMakeFiles/chess.dir

@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/arian/vscodeprojects/AP-PRoject/src/main.cpp
+board.h
+/home/arian/vscodeprojects/AP-PRoject/src/board.h
+
+headers/board.h
+kings.h
+headers/kings.h
+
+headers/kings.h
+piece.h
+headers/piece.h
+
+headers/piece.h
+iostream
+-
+string
+-
+vector
+-
+map
+-
+
