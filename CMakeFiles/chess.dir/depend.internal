@@ -4,6 +4,7 @@
 CMakeFiles/chess.dir/src/board.cpp.o
  /home/arian/vscodeprojects/AP-PRoject/src/board.cpp
  headers/board.h
+ headers/cells.h
  headers/kings.h
  headers/piece.h
 CMakeFiles/chess.dir/src/kings.cpp.o
@@ -13,6 +14,7 @@ CMakeFiles/chess.dir/src/kings.cpp.o
 CMakeFiles/chess.dir/src/main.cpp.o
  /home/arian/vscodeprojects/AP-PRoject/src/main.cpp
  headers/board.h
+ headers/cells.h
  headers/kings.h
  headers/piece.h
 CMakeFiles/chess.dir/src/piece.cpp.o

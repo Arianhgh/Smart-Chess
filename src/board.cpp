@@ -1,4 +1,50 @@
 #include "board.h"
+void chessboard::clickmanager(sf::Vector2i position){
+    int row = position.y / 100;
+    int col = position.x / 100;
+    if (row > 7 || col > 7) return;
+    if (board[row][col] != "--"){
+    //uichess[row][col].cellul.setFillColor(sf::Color::Yellow);
+
+    }
+
+}
+void chessboard::drawboard(){
+    for(int i=0; i<8; i++){
+        for(int j=0; j<8; j++){
+            window->draw(uichess[i][j].cellul);
+            if (board[i][j] != "--"){
+                window->draw(interboard[i][j].spirite);
+            }
+        }
+    }
+}
+void chessboard::setup_board(){
+    int e = -1;
+    for(int i=0; i<8; i++){
+        for (int j = 0; j < 8; j++){
+            uichess[i][j].cellul.setSize(sf::Vector2f(100,100));
+            if (e == 1)
+                uichess[i][j].cellul.setFillColor(sf::Color::Black);
+            else{
+                uichess[i][j].cellul.setFillColor(sf::Color::White);
+            }
+            e *= -1;
+            uichess[i][j].cellul.setPosition(sf::Vector2f(j*100,i*100));
+    }
+    e *= -1;
+    }
+    font.loadFromFile("textures/arial.ttf");
+    status.setFont(font);
+    status.setCharacterSize(30);
+    status.setStyle(sf::Text::Regular);
+    status.setFillColor(sf::Color::Black);
+    status.setPosition(sf::Vector2f(320,320));
+    update_status();
+}
+void chessboard::update_status(){
+    status.setString("HELLO");
+}
 void chessboard::fill_board(){
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
@@ -9,57 +55,117 @@ void chessboard::fill_board(){
                     king tmp("K","W",x.position_x,x.position_y);
                     kings[0]= tmp;
                     interboard[i][j] = x;
+                    textures[i][j].loadFromFile("textures/w_king.png");
+                    interboard[i][j].spirite.setTexture(textures[i][j]);
+                    interboard[i][j].spirite.setOrigin(-35,-25);
+                    interboard[i][j].spirite.setPosition(sf::Vector2f(j * 100,i * 100));
+                    interboard[i][j].spirite.scale(sf::Vector2f(.5f, .5f));
 
                 } else{
                     piece x("K","B",i,j);
                     king tmp("K","B",x.position_x,x.position_y);
                     kings[1] = tmp;
                     interboard[i][j] = x;
+                    textures[i][j].loadFromFile("textures/b_king.png");
+                    interboard[i][j].spirite.setTexture(textures[i][j]);
+                    interboard[i][j].spirite.setOrigin(-35,-25);
+                    interboard[i][j].spirite.setPosition(sf::Vector2f(j * 100,i * 100));
+                    interboard[i][j].spirite.scale(sf::Vector2f(.5f, .5f));
                 }
             }
             if (board[i][j][0] == 'Q' ) {
                 if (board[i][j][1] == 'W') {
                     piece x("Q","W",i,j);
                     interboard[i][j] = x;
+                    textures[i][j].loadFromFile("textures/w_queen.png");
+                    interboard[i][j].spirite.setTexture(textures[i][j]);
+                    interboard[i][j].spirite.setOrigin(-35,-25);
+                    interboard[i][j].spirite.setPosition(sf::Vector2f(j * 100,i * 100));
+                    interboard[i][j].spirite.scale(sf::Vector2f(.5f, .5f));
                 } else{
                     piece x("Q","B",i,j);
                     interboard[i][j] = x;
+                    textures[i][j].loadFromFile("textures/b_queen.png");
+                    interboard[i][j].spirite.setTexture(textures[i][j]);
+                    interboard[i][j].spirite.setOrigin(-35,-25);
+                    interboard[i][j].spirite.setPosition(sf::Vector2f(j * 100,i * 100));
+                    interboard[i][j].spirite.scale(sf::Vector2f(.5f, .5f));
                 }
             }
             if (board[i][j][0] == 'B' ) {
                 if (board[i][j][1] == 'W') {
                     piece x("B","W",i,j);
                     interboard[i][j] = x;
+                    textures[i][j].loadFromFile("textures/w_bishop.png");
+                    interboard[i][j].spirite.setTexture(textures[i][j]);
+                    interboard[i][j].spirite.setOrigin(-35,-25);
+                    interboard[i][j].spirite.setPosition(sf::Vector2f(j * 100,i * 100));
+                    interboard[i][j].spirite.scale(sf::Vector2f(.5f, .5f));
                 } else{
                     piece x("B","B",i,j);
                     interboard[i][j] = x;
+                    textures[i][j].loadFromFile("textures/b_bishop.png");
+                    interboard[i][j].spirite.setTexture(textures[i][j]);
+                    interboard[i][j].spirite.setOrigin(-35,-25);
+                    interboard[i][j].spirite.setPosition(sf::Vector2f(j * 100,i * 100));
+                    interboard[i][j].spirite.scale(sf::Vector2f(.5f, .5f));
                 }
             }
             if (board[i][j][0] == 'N' ) {
                 if (board[i][j][1] == 'W') {
                     piece x("N","W",i,j);
                     interboard[i][j] = x;
+                    textures[i][j].loadFromFile("textures/w_knight.png");
+                    interboard[i][j].spirite.setTexture(textures[i][j]);
+                    interboard[i][j].spirite.setOrigin(-35,-25);
+                    interboard[i][j].spirite.setPosition(sf::Vector2f(j * 100,i * 100));
+                    interboard[i][j].spirite.scale(sf::Vector2f(.5f, .5f));
                 } else{
                     piece x("N","B",i,j);
                     interboard[i][j] = x;
+                    textures[i][j].loadFromFile("textures/b_knight.png");
+                    interboard[i][j].spirite.setTexture(textures[i][j]);
+                    interboard[i][j].spirite.setOrigin(-35,-25);
+                    interboard[i][j].spirite.setPosition(sf::Vector2f(j * 100,i * 100));
+                    interboard[i][j].spirite.scale(sf::Vector2f(.5f, .5f));
                 }
             }
             if (board[i][j][0] == 'R' ) {
                 if (board[i][j][1] == 'W') {
                     piece x("R","W",i,j);
                     interboard[i][j] = x;
+                    textures[i][j].loadFromFile("textures/w_rook.png");
+                    interboard[i][j].spirite.setTexture(textures[i][j]);
+                    interboard[i][j].spirite.setOrigin(-35,-25);
+                    interboard[i][j].spirite.setPosition(sf::Vector2f(j * 100,i * 100));
+                    interboard[i][j].spirite.scale(sf::Vector2f(.5f, .5f));
                 } else{
                     piece x("R","B",i,j);
                     interboard[i][j] = x;
+                    textures[i][j].loadFromFile("textures/b_rook.png");
+                    interboard[i][j].spirite.setTexture(textures[i][j]);
+                    interboard[i][j].spirite.setOrigin(-35,-25);
+                    interboard[i][j].spirite.setPosition(sf::Vector2f(j * 100,i * 100));
+                    interboard[i][j].spirite.scale(sf::Vector2f(.5f, .5f));
                 }
             }
             if (board[i][j][0] == 'P' ) {
                 if (board[i][j][1] == 'W') {
                     piece x("P","W",i,j);
                     interboard[i][j] = x;
+                    textures[i][j].loadFromFile("textures/w_pawn.png");
+                    interboard[i][j].spirite.setTexture(textures[i][j]);
+                    interboard[i][j].spirite.setOrigin(-35,-25);
+                    interboard[i][j].spirite.setPosition(sf::Vector2f(j * 100,i * 100));
+                    interboard[i][j].spirite.scale(sf::Vector2f(.5f, .5f));
                 } else{
                     piece x("P","B",i,j);
                     interboard[i][j] = x;
+                    textures[i][j].loadFromFile("textures/b_pawn.png");
+                    interboard[i][j].spirite.setTexture(textures[i][j]);
+                    interboard[i][j].spirite.setOrigin(-35,-25);
+                    interboard[i][j].spirite.setPosition(sf::Vector2f(j * 100,i * 100));
+                    interboard[i][j].spirite.scale(sf::Vector2f(.5f, .5f));
                 }
             }
         }
@@ -72,6 +178,27 @@ void chessboard::show_board(){
             }
             cout << endl;
         }
+}
+void chessboard::run(){
+    fill_board();
+    setup_board();
+    window->display();
+    while(window->isOpen()){
+        sf::Event event;
+        while(window->pollEvent(event)){
+            if (event.type == sf::Event::Closed){
+                window->close();
+            }
+            if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                clickmanager(sf::Mouse::getPosition(*window));
+            }
+        }
+        window->clear(sf::Color::Red);
+        drawboard();
+        update_status();
+        window->display();
+
+    }
 }
 bool chessboard::move(string type,int startx,int starty,int endx,int endy,piece interboard[8][8],string boarde[8][8]){
         piece empty;
@@ -369,6 +496,8 @@ bool chessboard::find_dangerd(int color,int step,piece boarde[8][8],string board
                     }           
                                 bool tmp = move(boarde[i][j].type,i,j,k,r,boarde,board);
                                 if (tmp && !kings[colores].is_check(boarde)){
+                                    vector<int> teremp = {i,j,k,r};
+                                    possiblemoves.push_back(teremp);
                                     checker.insert(pair<vector<int>,bool>({i,j},true));
                                     result.push_back({i,j,k,r});
                                     turn = (-1) * turn;

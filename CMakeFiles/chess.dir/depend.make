@@ -3,6 +3,7 @@
 
 CMakeFiles/chess.dir/src/board.cpp.o: src/board.cpp
 CMakeFiles/chess.dir/src/board.cpp.o: headers/board.h
+CMakeFiles/chess.dir/src/board.cpp.o: headers/cells.h
 CMakeFiles/chess.dir/src/board.cpp.o: headers/kings.h
 CMakeFiles/chess.dir/src/board.cpp.o: headers/piece.h
 
@@ -12,6 +13,7 @@ CMakeFiles/chess.dir/src/kings.cpp.o: headers/piece.h
 
 CMakeFiles/chess.dir/src/main.cpp.o: src/main.cpp
 CMakeFiles/chess.dir/src/main.cpp.o: headers/board.h
+CMakeFiles/chess.dir/src/main.cpp.o: headers/cells.h
 CMakeFiles/chess.dir/src/main.cpp.o: headers/kings.h
 CMakeFiles/chess.dir/src/main.cpp.o: headers/piece.h
 

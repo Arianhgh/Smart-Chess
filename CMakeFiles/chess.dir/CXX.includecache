@@ -13,6 +13,14 @@ board.h
 headers/board.h
 kings.h
 headers/kings.h
+cells.h
+headers/cells.h
+
+headers/cells.h
+vector
+-
+SFML/Graphics.hpp
+-
 
 headers/kings.h
 piece.h
@@ -26,5 +34,7 @@ string
 vector
 -
 map
+-
+SFML/Graphics.hpp
 -
 

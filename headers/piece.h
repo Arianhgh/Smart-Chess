@@ -3,12 +3,14 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <SFML/Graphics.hpp>
 using namespace std;
 class piece{
     public :
     string type;
     string color;
     int position_x,position_y;
+    sf::Sprite spirite;
     piece(string _type="",string _color="",int position_x_=0,int position_y_=0){
         this -> color = _color;
         this -> position_x = position_x_;
