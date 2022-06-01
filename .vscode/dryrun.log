@@ -1,0 +1,29 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/arian/AP-Chess'
+/usr/bin/cmake -S/home/arian/vscodeprojects/AP-PRoject -B/home/arian/vscodeprojects/AP-PRoject --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/arian/vscodeprojects/AP-PRoject/CMakeFiles /home/arian/vscodeprojects/AP-PRoject/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[1]: Entering directory '/home/arian/AP-Chess'
+make -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/depend
+ 
+make[2]: Entering directory '/home/arian/AP-Chess'
+cd /home/arian/vscodeprojects/AP-PRoject && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/arian/vscodeprojects/AP-PRoject /home/arian/vscodeprojects/AP-PRoject /home/arian/vscodeprojects/AP-PRoject /home/arian/vscodeprojects/AP-PRoject /home/arian/vscodeprojects/AP-PRoject/CMakeFiles/chess.dir/DependInfo.cmake --color=
+make[2]: Leaving directory '/home/arian/AP-Chess'
+make -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/build
+make[2]: Entering directory '/home/arian/AP-Chess'
+/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/home/arian/vscodeprojects/AP-PRoject/CMakeFiles --progress-num=1 "Building CXX object CMakeFiles/chess.dir/src/main.cpp.o"
+/usr/bin/c++   -I/home/arian/vscodeprojects/AP-PRoject/headers  -std=gnu++11 -o CMakeFiles/chess.dir/src/main.cpp.o -c /home/arian/vscodeprojects/AP-PRoject/src/main.cpp
+/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/home/arian/vscodeprojects/AP-PRoject/CMakeFiles --progress-num=2 "Building CXX object CMakeFiles/chess.dir/src/piece.cpp.o"
+/usr/bin/c++   -I/home/arian/vscodeprojects/AP-PRoject/headers  -std=gnu++11 -o CMakeFiles/chess.dir/src/piece.cpp.o -c /home/arian/vscodeprojects/AP-PRoject/src/piece.cpp
+/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/home/arian/vscodeprojects/AP-PRoject/CMakeFiles --progress-num=3 "Building CXX object CMakeFiles/chess.dir/src/kings.cpp.o"
+/usr/bin/c++   -I/home/arian/vscodeprojects/AP-PRoject/headers  -std=gnu++11 -o CMakeFiles/chess.dir/src/kings.cpp.o -c /home/arian/vscodeprojects/AP-PRoject/src/kings.cpp
+/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/home/arian/vscodeprojects/AP-PRoject/CMakeFiles --progress-num=4 "Building CXX object CMakeFiles/chess.dir/src/board.cpp.o"
+/usr/bin/c++   -I/home/arian/vscodeprojects/AP-PRoject/headers  -std=gnu++11 -o CMakeFiles/chess.dir/src/board.cpp.o -c /home/arian/vscodeprojects/AP-PRoject/src/board.cpp
+/usr/bin/cmake -E cmake_echo_color --switch= --green --bold --progress-dir=/home/arian/vscodeprojects/AP-PRoject/CMakeFiles --progress-num=5 "Linking CXX executable chess"
+/usr/bin/cmake -E cmake_link_script CMakeFiles/chess.dir/link.txt --verbose=
+make[2]: Leaving directory '/home/arian/AP-Chess'
+/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/home/arian/vscodeprojects/AP-PRoject/CMakeFiles --progress-num=1,2,3,4,5 "Built target chess"
+make[1]: Leaving directory '/home/arian/AP-Chess'
+/usr/bin/cmake -E cmake_progress_start /home/arian/vscodeprojects/AP-PRoject/CMakeFiles 0
+make: Leaving directory '/home/arian/AP-Chess'
+ 

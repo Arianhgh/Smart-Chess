@@ -17,7 +17,9 @@ class chessboard{
     vector<vector<int>> possiblemoves;
     vector<string> finalresults;
     sf::Texture textures[8][8];
-    //map<piece, sf::Texture> textures;
+    int selected[2] = {-1,-1};
+    int turncolor = 1;
+    sf::Color lastcolor;
     int u = 0;
     int we = 0;
     int flag = 0;

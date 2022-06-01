@@ -11,6 +11,7 @@ class piece{
     string color;
     int position_x,position_y;
     sf::Sprite spirite;
+    vector<int> allmoves;
     piece(string _type="",string _color="",int position_x_=0,int position_y_=0){
         this -> color = _color;
         this -> position_x = position_x_;
@@ -23,4 +24,5 @@ class piece{
     bool is_valid_bishop(int startx,int starty, int endx, int endy,piece board[8][8]);
     bool is_valid_queen(int startx,int starty, int endx, int endy,piece board[8][8]);
     bool is_valid_king(int startx,int starty, int endx, int endy,piece board[8][8]);
+    void possiblemoves(int startx,int starty,piece board[8][8]);
 };

@@ -2,7 +2,7 @@
 bool piece::is_valid_pawn(int startx,int starty, int endx, int endy,piece board[8][8]){
     if (endx < 0 || endx > 7 && endy < 0 && endy > 7)
             return false;
-        if (position_x == 1 || position_x == 7){
+        if (position_x == 1 || position_x == 6){
             if (starty == endy && (abs(endx - startx) == 1 || abs(endx - startx) == 2) && board[endx][endy].type == ""){
                 if (board[startx][starty].color=="W" && endx - startx == -1 ){
                     return true;
@@ -231,4 +231,67 @@ bool piece::is_valid_king(int startx,int starty, int endx, int endy,piece board[
             return false;
         }
         return false;
+}
+void piece::possiblemoves(int startx,int starty,piece board[8][8]){
+    if(board[startx][starty].type == "P"){
+        for(int i = 0;i<8;i++){
+            for(int j = 0;j<8;j++){
+                if((i != startx || j != starty) && is_valid_pawn(startx,starty,i,j,board)){
+                    cout << i << j << endl;
+                    allmoves.push_back(i);
+                    allmoves.push_back(j);
+                }
+            }
+        }
+    }
+    if(board[startx][starty].type == "R"){
+        for(int i = 0;i<8;i++){
+            for(int j = 0;j<8;j++){
+                if((i != startx || j != starty) && is_valid_rook(startx,starty,i,j,board)){
+                    allmoves.push_back(i);
+                    allmoves.push_back(j);
+                }
+            }
+        }
+    }
+    if(board[startx][starty].type == "B"){
+        for(int i = 0;i<8;i++){
+            for(int j = 0;j<8;j++){
+                if((i != startx || j != starty) && is_valid_bishop(startx,starty,i,j,board)){
+                    allmoves.push_back(i);
+                    allmoves.push_back(j);
+                }
+            }
+        }
+    }
+    if(board[startx][starty].type == "N"){
+        for(int i = 0;i<8;i++){
+            for(int j = 0;j<8;j++){
+                if((i != startx || j != starty) && is_valid_knight(startx,starty,i,j,board)){
+                    allmoves.push_back(i);
+                    allmoves.push_back(j);
+                }
+            }
+        }
+    }
+    if(board[startx][starty].type == "Q"){
+        for(int i = 0;i<8;i++){
+            for(int j = 0;j<8;j++){
+                if((i != startx || j != starty) && is_valid_queen(startx,starty,i,j,board)){
+                    allmoves.push_back(i);
+                    allmoves.push_back(j);
+                }
+            }
+        }
+    }
+    if(board[startx][starty].type == "K"){
+        for(int i = 0;i<8;i++){
+            for(int j = 0;j<8;j++){
+                if((i != startx || j != starty) && is_valid_king(startx,starty,i,j,board)){
+                    allmoves.push_back(i);
+                    allmoves.push_back(j);
+                }
+            }
+        }
+    }
 }

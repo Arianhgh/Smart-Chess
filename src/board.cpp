@@ -2,10 +2,68 @@
 void chessboard::clickmanager(sf::Vector2i position){
     int row = position.y / 100;
     int col = position.x / 100;
+    string colors = (turncolor == 1) ? "W" : "B";
     if (row > 7 || col > 7) return;
-    if (board[row][col] != "--"){
-    //uichess[row][col].cellul.setFillColor(sf::Color::Yellow);
-
+    cout << row << " " << col << endl;
+    if (board[row][col] != "--" && selected[0]==-1 && colors == interboard[row][col].color){
+        selected[0] = row;
+        selected[1] = col;
+        lastcolor = uichess[row][col].cellul.getFillColor();
+        uichess[row][col].cellul.setFillColor(sf::Color::Yellow);
+        interboard[row][col].possiblemoves(row,col,interboard);
+        for(int i=0;i<interboard[row][col].allmoves.size();i+=2){
+            uichess[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]].cellul.setFillColor(sf::Color::Green);
+            //uichess[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]].cellul.setOutlineThickness(-1);
+            //uichess[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]].cellul.setOutlineColor(sf::Color::Black);
+        }
+    }
+    else{
+        bool want_to_move = false;
+        if(selected[0]!= -1)
+            uichess[selected[0]][selected[1]].cellul.setFillColor(lastcolor);
+        for(int i=0;i<interboard[selected[0]][selected[1]].allmoves.size();i+=2){
+            if(selected[0]==-1){
+                break;
+            }
+            if(interboard[selected[0]][selected[1]].allmoves[i]==row && interboard[selected[0]][selected[1]].allmoves[i+1]==col){
+                want_to_move = true;
+            }
+            if((interboard[selected[0]][selected[1]].allmoves[i]+interboard[selected[0]][selected[1]].allmoves[i+1])%2==1){
+                uichess[interboard[selected[0]][selected[1]].allmoves[i]][interboard[selected[0]][selected[1]].allmoves[i+1]].cellul.setFillColor(sf::Color::Black);
+            }
+            else{
+                uichess[interboard[selected[0]][selected[1]].allmoves[i]][interboard[selected[0]][selected[1]].allmoves[i+1]].cellul.setFillColor(sf::Color::White);
+            }
+        }
+        if(want_to_move){
+            cout << "moving" << endl;
+            move(interboard[selected[0]][selected[1]].type,selected[0],selected[1],row,col,interboard,board);
+            want_to_move = false;
+            turncolor *= -1;
+            selected[0] = -1;
+            selected[1] = -1;
+            interboard[row][col].allmoves.clear();        }
+        else{
+            if(board[row][col] == "--"){
+                selected[0] = -1;
+                selected[1] = -1;
+            }
+            else{
+                cout << 234 << endl;
+                if (colors == interboard[row][col].color){
+                selected[0] = row;
+                selected[1] = col;
+                lastcolor = uichess[row][col].cellul.getFillColor();
+                uichess[row][col].cellul.setFillColor(sf::Color::Yellow);
+                interboard[row][col].possiblemoves(row,col,interboard);
+                for(int i=0;i<interboard[row][col].allmoves.size();i+=2){
+                uichess[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]].cellul.setFillColor(sf::Color::Green);
+                //uichess[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]].cellul.setOutlineThickness(-1);
+                //uichess[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]].cellul.setOutlineColor(sf::Color::Black);
+                }
+        }
+            }
+        }
     }
 
 }
@@ -31,6 +89,8 @@ void chessboard::setup_board(){
             }
             e *= -1;
             uichess[i][j].cellul.setPosition(sf::Vector2f(j*100,i*100));
+            uichess[i][j].cellul.setOutlineThickness(-1);
+            uichess[i][j].cellul.setOutlineColor(sf::Color::Black);
     }
     e *= -1;
     }
@@ -203,6 +263,7 @@ void chessboard::run(){
 bool chessboard::move(string type,int startx,int starty,int endx,int endy,piece interboard[8][8],string boarde[8][8]){
         piece empty;
         if (type == "P"){
+            cout << startx << " " << starty << " " << endx << " " << endy << endl;
             if (interboard[startx][starty].is_valid_pawn(startx,starty,endx,endy,interboard)){
                 interboard[endx][endy] = interboard[startx][starty];
                 interboard[startx][starty] = empty;
@@ -210,6 +271,7 @@ bool chessboard::move(string type,int startx,int starty,int endx,int endy,piece 
                 boarde[startx][starty] = "--";
                 interboard[endx][endy].position_x = endx;
                 interboard[endx][endy].position_y = endy;
+                interboard[endx][endy].spirite.setPosition(sf::Vector2f(endy * 100,endx * 100));
                 return true;
             }
         }
@@ -221,6 +283,7 @@ bool chessboard::move(string type,int startx,int starty,int endx,int endy,piece 
                 boarde[startx][starty] = "--";
                 interboard[endx][endy].position_x = endx;
                 interboard[endx][endy].position_y = endy;
+                interboard[endx][endy].spirite.setPosition(sf::Vector2f(endy * 100,endx * 100));
                 return true;
             }
         }
@@ -234,6 +297,7 @@ bool chessboard::move(string type,int startx,int starty,int endx,int endy,piece 
                 boarde[startx][starty] = "--";
                 interboard[endx][endy].position_x = endx;
                 interboard[endx][endy].position_y = endy;
+                interboard[endx][endy].spirite.setPosition(sf::Vector2f(endy * 100,endx * 100));
                 return true;
             }
         }
@@ -245,6 +309,7 @@ bool chessboard::move(string type,int startx,int starty,int endx,int endy,piece 
                 boarde[startx][starty] = "--";
                 interboard[endx][endy].position_x = endx;
                 interboard[endx][endy].position_y = endy;
+                interboard[endx][endy].spirite.setPosition(sf::Vector2f(endy * 100,endx * 100));
                 return true;
             }
         }
@@ -256,6 +321,7 @@ bool chessboard::move(string type,int startx,int starty,int endx,int endy,piece 
                 boarde[startx][starty] = "--";
                 interboard[endx][endy].position_x = endx;
                 interboard[endx][endy].position_y = endy;
+                interboard[endx][endy].spirite.setPosition(sf::Vector2f(endy * 100,endx * 100));
                 return true;
             }
         }
@@ -267,6 +333,7 @@ bool chessboard::move(string type,int startx,int starty,int endx,int endy,piece 
                 boarde[startx][starty] = "--";
                 interboard[endx][endy].position_x = endx;
                 interboard[endx][endy].position_y = endy;
+                interboard[endx][endy].spirite.setPosition(sf::Vector2f(endy * 100,endx * 100));
                 if (interboard[endx][endy].color == "W"){
                     kings[0].update_pos(endx,endy);
                 }
