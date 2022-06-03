@@ -15,9 +15,45 @@ void chessboard::undo(int startx,int starty,int endx,int endy,string board[8][8]
         kings[1].update_pos(endx,endy);
      }
      }
-     //interboard[endx][endy].spirite.setPosition(sf::Vector2f(endy * 100,endx * 100));
+     interboard[endx][endy].spirite.setPosition(sf::Vector2f(endy * 100,endx * 100));
 }
 void chessboard::clickmanager(sf::Vector2i position){
+    int x = position.x;
+    int y = position.y;
+    if((x>=860 && x <= 960)&&(y>=660 && y<= 710) && undo_moves.size()>0){
+        cout << "undo" << endl;
+        undo(undo_moves[undo_moves.size()-1][2],undo_moves[undo_moves.size()-1][3],undo_moves[undo_moves.size()-1][0],undo_moves[undo_moves.size()-1][1],board,interboard);
+        board[undo_moves[undo_moves.size()-1][2]][undo_moves[undo_moves.size()-1][3]] = undo_strs[undo_strs.size()-1];
+        interboard[undo_moves[undo_moves.size()-1][2]][undo_moves[undo_moves.size()-1][3]] = undo_pieces[undo_pieces.size()-1];
+        undo_moves.pop_back();
+        undo_pieces.pop_back();
+        undo_strs.pop_back();
+        turncolor = turncolor * -1;
+        int colores = (turncolor==1)?0:1;
+        if(kings[colores].is_check(interboard)){
+                    uichess[kings[colores].position_x][kings[colores].position_y].cellul.setFillColor(sf::Color::Red);
+                    checkkingx = kings[colores].position_x;
+                    checkkingy = kings[colores].position_y;
+                }
+        else{
+            if((checkkingx + checkkingy) % 2 == 1){
+                    uichess[checkkingx][checkkingy].cellul.setFillColor(sf::Color::Black);
+                }
+                else{
+                    uichess[checkkingx][checkkingy].cellul.setFillColor(sf::Color::White);
+                }
+                checkkingx = -1;
+                checkkingy = -1;
+
+        }
+        if(checkmate != 0){
+            checkmate = 0;
+        }
+        if(turncolor == 1) status.setOutlineColor(sf::Color::Blue);
+            else status.setOutlineColor(sf::Color::Red);
+            string turn = (turncolor == 1 ? "White" : "Black");
+            status.setString(turn + "'s turn");
+    }
     int row = position.y / 100;
     int col = position.x / 100;
     string colors = (turncolor == 1) ? "W" : "B";
@@ -30,14 +66,12 @@ void chessboard::clickmanager(sf::Vector2i position){
         uichess[row][col].cellul.setFillColor(sf::Color::Yellow);
         interboard[row][col].possiblemoves(row,col,interboard,colores);
         for(int i=0;i<interboard[row][col].allmoves.size()-1;i+=2){
-             cout << interboard[row][col].allmoves.size() << endl;
              if(interboard[row][col].allmoves.size()==0){
                  cout << "no moves" << endl;
                  break;
              }
              piece tmp = interboard[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]];
              string temp = board[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]];
-             cout << "(" << interboard[row][col].allmoves[i] << "," << interboard[row][col].allmoves[i+1] << ")" << endl;
              undo(selected[0],selected[1],interboard[row][col].allmoves[i],interboard[row][col].allmoves[i+1],board,interboard);
              if(kings[colores].is_check(interboard)){
                  undo(interboard[row][col].allmoves[i],interboard[row][col].allmoves[i+1],selected[0],selected[1],board,interboard);
@@ -78,7 +112,10 @@ void chessboard::clickmanager(sf::Vector2i position){
         }
         if(want_to_move){
             cout << "moving" << endl;
+            undo_pieces.push_back(interboard[row][col]);
+            undo_strs.push_back(board[row][col]);
             move(interboard[selected[0]][selected[1]].type,selected[0],selected[1],row,col,interboard,board);
+            undo_moves.push_back({selected[0],selected[1],row,col});
             want_to_move = false;
             if(checkkingx != -1){
             if (!kings[colores].is_check(interboard)){
@@ -174,6 +211,16 @@ void chessboard::drawboard(){
     uitextures[2] = bg;
     background.setTexture(&uitextures[2]);
     window->draw(background);
+    sf::RectangleShape undobutton(sf::Vector2f(100,50));
+    undobutton.setPosition(860,660);
+    undobutton.setFillColor(sf::Color::Red);
+    sf::Text undotext;
+    undotext.setFont(font);
+    undotext.setString("Undo");
+    undotext.setCharacterSize(30);
+    undotext.setPosition(870,670);
+    window->draw(undobutton);
+    window->draw(undotext);
     if(checkmate != 0){
         sf::RectangleShape rect(sf::Vector2f(280,280));
         rect.setOutlineThickness(1);

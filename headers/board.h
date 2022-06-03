@@ -12,6 +12,9 @@ class chessboard{
     }
     int turn = 1;
     map<vector<int>, bool> checker;
+    vector<vector<int>> undo_moves;
+    vector<string> undo_strs;
+    vector<piece> undo_pieces;
     vector<vector<int>> result;
     vector<vector<int>> results;
     vector<vector<int>> results1;

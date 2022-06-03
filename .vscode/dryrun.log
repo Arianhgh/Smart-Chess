@@ -5,7 +5,6 @@ make: Entering directory '/home/arian/AP-Chess'
 make -f CMakeFiles/Makefile2 all
 make[1]: Entering directory '/home/arian/AP-Chess'
 make -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/depend
- 
 make[2]: Entering directory '/home/arian/AP-Chess'
 cd /home/arian/vscodeprojects/AP-PRoject && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/arian/vscodeprojects/AP-PRoject /home/arian/vscodeprojects/AP-PRoject /home/arian/vscodeprojects/AP-PRoject /home/arian/vscodeprojects/AP-PRoject /home/arian/vscodeprojects/AP-PRoject/CMakeFiles/chess.dir/DependInfo.cmake --color=
 make[2]: Leaving directory '/home/arian/AP-Chess'
