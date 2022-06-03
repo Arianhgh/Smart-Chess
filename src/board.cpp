@@ -1,20 +1,61 @@
 #include "board.h"
+void chessboard::undo(int startx,int starty,int endx,int endy,string board[8][8],piece interboard[8][8]){
+    piece empty;
+     interboard[endx][endy] = interboard[startx][starty];
+     interboard[startx][starty] = empty;
+     board[endx][endy] = board[startx][starty];
+     board[startx][starty] = "--";
+     interboard[endx][endy].position_x = endx;
+     interboard[endx][endy].position_y = endy;
+     if(interboard[endx][endy].type =="K"){
+     if (interboard[endx][endy].color == "W"){
+        kings[0].update_pos(endx,endy);
+     }
+     else if (interboard[endx][endy].color == "B"){
+        kings[1].update_pos(endx,endy);
+     }
+     }
+     //interboard[endx][endy].spirite.setPosition(sf::Vector2f(endy * 100,endx * 100));
+}
 void chessboard::clickmanager(sf::Vector2i position){
     int row = position.y / 100;
     int col = position.x / 100;
     string colors = (turncolor == 1) ? "W" : "B";
+    int colores = (turncolor==1)?0:1;
     if (row > 7 || col > 7) return;
-    cout << row << " " << col << endl;
     if (board[row][col] != "--" && selected[0]==-1 && colors == interboard[row][col].color){
         selected[0] = row;
         selected[1] = col;
         lastcolor = uichess[row][col].cellul.getFillColor();
         uichess[row][col].cellul.setFillColor(sf::Color::Yellow);
-        interboard[row][col].possiblemoves(row,col,interboard);
+        interboard[row][col].possiblemoves(row,col,interboard,colores);
+        for(int i=0;i<interboard[row][col].allmoves.size()-1;i+=2){
+             cout << interboard[row][col].allmoves.size() << endl;
+             if(interboard[row][col].allmoves.size()==0){
+                 cout << "no moves" << endl;
+                 break;
+             }
+             piece tmp = interboard[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]];
+             string temp = board[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]];
+             cout << "(" << interboard[row][col].allmoves[i] << "," << interboard[row][col].allmoves[i+1] << ")" << endl;
+             undo(selected[0],selected[1],interboard[row][col].allmoves[i],interboard[row][col].allmoves[i+1],board,interboard);
+             if(kings[colores].is_check(interboard)){
+                 undo(interboard[row][col].allmoves[i],interboard[row][col].allmoves[i+1],selected[0],selected[1],board,interboard);
+                 interboard[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]] = tmp;
+                 board[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]] = temp;
+                 interboard[row][col].allmoves.erase(interboard[row][col].allmoves.begin()+i,interboard[row][col].allmoves.begin()+i+2);
+                 i -= 2;
+             }
+             else{
+             undo(interboard[row][col].allmoves[i],interboard[row][col].allmoves[i+1],selected[0],selected[1],board,interboard);
+             interboard[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]] = tmp;
+             board[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]] = temp;
+             }
+             cout << interboard[row][col].allmoves.size() << endl;
+            
+        }
         for(int i=0;i<interboard[row][col].allmoves.size();i+=2){
             uichess[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]].cellul.setFillColor(sf::Color::Green);
-            //uichess[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]].cellul.setOutlineThickness(-1);
-            //uichess[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]].cellul.setOutlineColor(sf::Color::Black);
         }
     }
     else{
@@ -39,27 +80,77 @@ void chessboard::clickmanager(sf::Vector2i position){
             cout << "moving" << endl;
             move(interboard[selected[0]][selected[1]].type,selected[0],selected[1],row,col,interboard,board);
             want_to_move = false;
+            if(checkkingx != -1){
+            if (!kings[colores].is_check(interboard)){
+                if((checkkingx + checkkingy) % 2 == 1){
+                    uichess[checkkingx][checkkingy].cellul.setFillColor(sf::Color::Black);
+                }
+                else{
+                    uichess[checkkingx][checkkingy].cellul.setFillColor(sf::Color::White);
+                }
+                checkkingx = -1;
+                checkkingy = -1;
+            }
+            }
             turncolor *= -1;
+            if(turncolor == 1) status.setOutlineColor(sf::Color::Blue);
+            else status.setOutlineColor(sf::Color::Red);
+            string turn = (turncolor == 1 ? "White" : "Black");
+            status.setString(turn + "'s turn");
+            int colores = (turncolor==1)?0:1;
+            if(kings[colores].checkmate(interboard)){
+                checkmate = colores + 1;
+            }
+            else{
+                if(kings[colores].is_check(interboard)){
+                    uichess[kings[colores].position_x][kings[colores].position_y].cellul.setFillColor(sf::Color::Red);
+                    checkkingx = kings[colores].position_x;
+                    checkkingy = kings[colores].position_y;
+                }
+            }
+                
             selected[0] = -1;
             selected[1] = -1;
-            interboard[row][col].allmoves.clear();        }
+            interboard[row][col].allmoves.clear();
+            //results.clear();        
+            }
         else{
             if(board[row][col] == "--"){
                 selected[0] = -1;
                 selected[1] = -1;
             }
             else{
-                cout << 234 << endl;
+                interboard[row][col].allmoves.clear();
+                //results.clear();
                 if (colors == interboard[row][col].color){
                 selected[0] = row;
                 selected[1] = col;
                 lastcolor = uichess[row][col].cellul.getFillColor();
                 uichess[row][col].cellul.setFillColor(sf::Color::Yellow);
-                interboard[row][col].possiblemoves(row,col,interboard);
+                interboard[row][col].possiblemoves(row,col,interboard,colores);
+                for(int i=0;i<interboard[row][col].allmoves.size()-1;i+=2){
+                    if(interboard[row][col].allmoves.size()==0){
+                        cout << "no moves" << endl;
+                        break;
+                     }
+                    piece tmp = interboard[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]];
+                    string temp = board[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]];
+                    undo(selected[0],selected[1],interboard[row][col].allmoves[i],interboard[row][col].allmoves[i+1],board,interboard);
+                    if(kings[colores].is_check(interboard)){
+                        undo(interboard[row][col].allmoves[i],interboard[row][col].allmoves[i+1],selected[0],selected[1],board,interboard);
+                        interboard[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]] = tmp;
+                        board[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]] = temp;
+                        interboard[row][col].allmoves.erase(interboard[row][col].allmoves.begin()+i,interboard[row][col].allmoves.begin()+i+2);
+                        i -= 2;
+                    }
+                    else{
+                    undo(interboard[row][col].allmoves[i],interboard[row][col].allmoves[i+1],selected[0],selected[1],board,interboard);
+                    interboard[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]] = tmp;
+                    board[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]] = temp;}
+                    
+                }
                 for(int i=0;i<interboard[row][col].allmoves.size();i+=2){
                 uichess[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]].cellul.setFillColor(sf::Color::Green);
-                //uichess[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]].cellul.setOutlineThickness(-1);
-                //uichess[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]].cellul.setOutlineColor(sf::Color::Black);
                 }
         }
             }
@@ -75,6 +166,32 @@ void chessboard::drawboard(){
                 window->draw(interboard[i][j].spirite);
             }
         }
+    }
+    sf::RectangleShape background(sf::Vector2f(400,800));
+    background.setPosition(800,0);
+    sf::Texture bg;
+    bg.loadFromFile("textures/background.jpg");
+    uitextures[2] = bg;
+    background.setTexture(&uitextures[2]);
+    window->draw(background);
+    if(checkmate != 0){
+        sf::RectangleShape rect(sf::Vector2f(280,280));
+        rect.setOutlineThickness(1);
+        rect.setOutlineColor(sf::Color::Blue);
+        rect.setPosition(sf::Vector2f(860,85));
+        sf::Texture texturei;
+        if(checkmate==1){
+            texturei.loadFromFile("textures/whitewin.jpg");
+            uitextures[0] = texturei;
+        }
+        else{
+            texturei.loadFromFile("textures/blackwin1.jpg");
+            uitextures[1] = texturei;
+        }
+        rect.setTexture(&uitextures[checkmate-1]);
+        status.setString("");
+        window->draw(rect);
+
     }
 }
 void chessboard::setup_board(){
@@ -96,19 +213,28 @@ void chessboard::setup_board(){
     }
     font.loadFromFile("textures/arial.ttf");
     status.setFont(font);
-    status.setCharacterSize(30);
+    status.setString("White's turn");
+    status.setCharacterSize(40);
     status.setStyle(sf::Text::Regular);
-    status.setFillColor(sf::Color::Black);
-    status.setPosition(sf::Vector2f(320,320));
-    update_status();
+    status.setOutlineColor(sf::Color::Blue);
+    status.setOutlineThickness(1);
+    status.setFillColor(sf::Color::White);
+    status.setPosition(sf::Vector2f(885,100));
+    
 }
 void chessboard::update_status(){
     status.setString("HELLO");
 }
 void chessboard::fill_board(){
-    for (int i = 0; i < 8; i++) {
-        for (int j = 0; j < 8; j++) {
-            cin >> board[i][j];
+    string s = sf::Clipboard::getString();
+    cout << s.length() << endl;
+    int x = 0;
+    for (int z = 0; z < s.length(); z+=3) {
+            int i = x / 8;
+            int j = x % 8;
+            x += 1;
+            board[i][j] = s[z];
+            board[i][j] += s[z+1];
             if (board[i][j][0] == 'K' ) {
                 if (board[i][j][1] == 'W') {
                     piece x("K","W",i,j);
@@ -228,7 +354,7 @@ void chessboard::fill_board(){
                     interboard[i][j].spirite.scale(sf::Vector2f(.5f, .5f));
                 }
             }
-        }
+        
     }
 }
 void chessboard::show_board(){
@@ -253,9 +379,9 @@ void chessboard::run(){
                 clickmanager(sf::Mouse::getPosition(*window));
             }
         }
-        window->clear(sf::Color::Red);
+        window->clear(sf::Color::White);
         drawboard();
-        update_status();
+        window->draw(status);
         window->display();
 
     }
@@ -263,7 +389,7 @@ void chessboard::run(){
 bool chessboard::move(string type,int startx,int starty,int endx,int endy,piece interboard[8][8],string boarde[8][8]){
         piece empty;
         if (type == "P"){
-            cout << startx << " " << starty << " " << endx << " " << endy << endl;
+            //cout << startx << " " << starty << " " << endx << " " << endy << endl;
             if (interboard[startx][starty].is_valid_pawn(startx,starty,endx,endy,interboard)){
                 interboard[endx][endy] = interboard[startx][starty];
                 interboard[startx][starty] = empty;
@@ -345,7 +471,7 @@ bool chessboard::move(string type,int startx,int starty,int endx,int endy,piece 
         }
         return false;
     }
-bool chessboard::find_dangerw(int color,int step,piece boarde[8][8],string board[8][8]){
+bool chessboard::find_dangerw(int color,int step,piece boarde[8][8],string board[8][8],int startx,int starty){
         //cout << result.size() << endl;
         u++;
         vector<int> ae = {5,3,3,4};
@@ -425,7 +551,7 @@ bool chessboard::find_dangerw(int color,int step,piece boarde[8][8],string board
                                 }
                                     result.push_back({i,j,k,r});
                                     turn = (-1) * turn;
-                                    bool res =  find_dangerw(-color,step+1,boarde,board);
+                                    bool res =  find_dangerw(-color,step+1,boarde,board,startx,starty);
                                     
                                     if (res && result.size() >= 1 && step == 1 && flag == 1){
                                        //for (int s = 0; s < 4; s++){

@@ -232,12 +232,12 @@ bool piece::is_valid_king(int startx,int starty, int endx, int endy,piece board[
         }
         return false;
 }
-void piece::possiblemoves(int startx,int starty,piece board[8][8]){
+void piece::possiblemoves(int startx,int starty,piece board[8][8],int color){
     if(board[startx][starty].type == "P"){
         for(int i = 0;i<8;i++){
             for(int j = 0;j<8;j++){
-                if((i != startx || j != starty) && is_valid_pawn(startx,starty,i,j,board)){
-                    cout << i << j << endl;
+                if((i != startx || j != starty) && is_valid_pawn(startx,starty,i,j,board) && board[i][j].type != "K"){
+                    //cout << i << j << endl;
                     allmoves.push_back(i);
                     allmoves.push_back(j);
                 }
@@ -247,7 +247,7 @@ void piece::possiblemoves(int startx,int starty,piece board[8][8]){
     if(board[startx][starty].type == "R"){
         for(int i = 0;i<8;i++){
             for(int j = 0;j<8;j++){
-                if((i != startx || j != starty) && is_valid_rook(startx,starty,i,j,board)){
+                if((i != startx || j != starty) && is_valid_rook(startx,starty,i,j,board) && board[i][j].type != "K"){
                     allmoves.push_back(i);
                     allmoves.push_back(j);
                 }
@@ -257,7 +257,7 @@ void piece::possiblemoves(int startx,int starty,piece board[8][8]){
     if(board[startx][starty].type == "B"){
         for(int i = 0;i<8;i++){
             for(int j = 0;j<8;j++){
-                if((i != startx || j != starty) && is_valid_bishop(startx,starty,i,j,board)){
+                if((i != startx || j != starty) && is_valid_bishop(startx,starty,i,j,board) && board[i][j].type != "K"){
                     allmoves.push_back(i);
                     allmoves.push_back(j);
                 }
@@ -267,7 +267,7 @@ void piece::possiblemoves(int startx,int starty,piece board[8][8]){
     if(board[startx][starty].type == "N"){
         for(int i = 0;i<8;i++){
             for(int j = 0;j<8;j++){
-                if((i != startx || j != starty) && is_valid_knight(startx,starty,i,j,board)){
+                if((i != startx || j != starty) && is_valid_knight(startx,starty,i,j,board) && board[i][j].type != "K"){
                     allmoves.push_back(i);
                     allmoves.push_back(j);
                 }
@@ -277,7 +277,7 @@ void piece::possiblemoves(int startx,int starty,piece board[8][8]){
     if(board[startx][starty].type == "Q"){
         for(int i = 0;i<8;i++){
             for(int j = 0;j<8;j++){
-                if((i != startx || j != starty) && is_valid_queen(startx,starty,i,j,board)){
+                if((i != startx || j != starty) && is_valid_queen(startx,starty,i,j,board) && board[i][j].type != "K"){
                     allmoves.push_back(i);
                     allmoves.push_back(j);
                 }
@@ -287,7 +287,7 @@ void piece::possiblemoves(int startx,int starty,piece board[8][8]){
     if(board[startx][starty].type == "K"){
         for(int i = 0;i<8;i++){
             for(int j = 0;j<8;j++){
-                if((i != startx || j != starty) && is_valid_king(startx,starty,i,j,board)){
+                if((i != startx || j != starty) && is_valid_king(startx,starty,i,j,board) && board[i][j].type != "K"){
                     allmoves.push_back(i);
                     allmoves.push_back(j);
                 }
