@@ -1,4 +1,212 @@
 #include "board.h"
+void chessboard::fill_board_manager(sf::Vector2i position){
+    int x = position.x;
+    int y = position.y;
+    if(x >= 860 && x <= 930 && y >= 100 && y <= 170){
+        piece wpawn("P","W",0,0);
+        string tmp = "White Pawn";
+        selected_piece.setString("Selected piece: "+tmp);
+        selectedpiece = wpawn;
+        piece_selected = true;
+    }
+    if(x>= 860 && x <= 930 && y >= 180 && y <= 250){
+        piece wrook("R","W",0,0);
+        string tmp = "White Rook";
+        selected_piece.setString("Selected piece: "+tmp);
+        selectedpiece = wrook;
+        piece_selected = true;
+    }
+    if(x>= 860 && x <= 930 && y >= 260 && y <= 330){
+        piece wknight("N","W",0,0);
+        string tmp = "White Knight";
+        selected_piece.setString("Selected piece: "+tmp);
+        selectedpiece = wknight;
+        piece_selected = true;
+    }
+    if(x>= 860 && x <= 930 && y >= 340 && y <= 410){
+        piece wbishop("B","W",0,0);
+        string tmp = "White Bishop";
+        selected_piece.setString("Selected piece: "+tmp);
+        selectedpiece = wbishop;
+        piece_selected = true;
+    }
+    if(x>= 860 && x <= 930 && y >= 420 && y <= 490){
+        piece wqueen("Q","W",0,0);
+        string tmp = "White Queen";
+        selected_piece.setString("Selected piece: "+tmp);
+        selectedpiece = wqueen;
+        piece_selected = true;
+    }
+    if(x>= 860 && x <= 930 && y >= 500 && y <= 570){
+        piece wking("K","W",0,0);
+        string tmp = "White King";
+        selected_piece.setString("Selected piece: "+tmp);
+        selectedpiece = wking;
+        piece_selected = true;
+    }
+    if(x>= 1060 && x <= 1130 && y >= 100 && y <= 170){
+        piece bpawn("P","B",0,0);
+        string tmp = "Black Pawn";
+        selected_piece.setString("Selected piece: "+tmp);
+        selectedpiece = bpawn;
+        piece_selected = true;
+    }
+    if(x>= 1060 && x <= 1130 && y >= 180 && y <= 250){
+        piece brook("R","B",0,0);
+        string tmp = "Black Rook";
+        selected_piece.setString("Selected piece: "+tmp);
+        selectedpiece = brook;
+        piece_selected = true;
+    }
+    if(x>= 1060 && x <= 1130 && y >= 260 && y <= 330){
+        piece bknight("N","B",0,0);
+        string tmp = "Black Knight";
+        selected_piece.setString("Selected piece: "+tmp);
+        selectedpiece = bknight;
+        piece_selected = true;
+    }
+    if(x>= 1060 && x <= 1130 && y >= 340 && y <= 410){
+        piece bbishop("B","B",0,0);
+        string tmp = "Black Bishop";
+        selected_piece.setString("Selected piece: "+tmp);
+        selectedpiece = bbishop;
+        piece_selected = true;
+    }
+    if(x>= 1060 && x <= 1130 && y >= 420 && y <= 490){
+        piece bqueen("Q","B",0,0);
+        string tmp = "Black Queen";
+        selected_piece.setString("Selected piece: "+tmp);
+        selectedpiece = bqueen;
+        piece_selected = true;
+    }
+    if(x>= 1060 && x <= 1130 && y >= 500 && y <= 570){
+        piece bking("K","B",0,0);
+        string tmp = "Black King";
+        selected_piece.setString("Selected piece: "+tmp);
+        selectedpiece = bking;
+        piece_selected = true;
+    }
+    if(piece_selected){
+        if(x>=0 && x<= 800 && y>=0 && y<=800){
+            int row = position.y / 100;
+            int col = position.x / 100;
+            int i = row;
+            int j = col;
+            if(kings[0].position_x == row && kings[0].position_y == col){
+                kings[0] = king();
+            }
+            else if (kings[1].position_x == row && kings[0].position_y == col){
+                kings[1] = king();
+            }
+            interboard[row][col] = selectedpiece;
+            interboard[row][col].position_x = row;
+            interboard[row][col].position_y = col;
+            interboard[i][j].spirite.setOrigin(-35,-25);
+            interboard[i][j].spirite.setPosition(sf::Vector2f(j * 100,i * 100));
+            interboard[i][j].spirite.scale(sf::Vector2f(.5f, .5f));
+            if(selectedpiece.type == "K" && selectedpiece.color == "W"){
+                king kingw("K","W",row,col);
+                kings[0] = kingw;
+                textures[i][j].loadFromFile("textures/w_king.png");
+                interboard[i][j].spirite.setTexture(textures[i][j]);
+                board[i][j] = "KW";
+            }
+            else if(selectedpiece.type == "K" && selectedpiece.color == "B"){
+                king kingb("K","B",row,col);
+                kings[1] = kingb;
+                textures[i][j].loadFromFile("textures/b_king.png");
+                interboard[i][j].spirite.setTexture(textures[i][j]);
+                board[i][j] = "KB";
+            }
+            else if(selectedpiece.type == "Q" && selectedpiece.color == "W"){
+                textures[i][j].loadFromFile("textures/w_queen.png");
+                interboard[i][j].spirite.setTexture(textures[i][j]);
+                board[i][j] = "QW";
+            }
+            else if(selectedpiece.type == "Q" && selectedpiece.color == "B"){
+                textures[i][j].loadFromFile("textures/b_queen.png");
+                interboard[i][j].spirite.setTexture(textures[i][j]);
+                board[i][j] = "QB";
+            }
+            else if(selectedpiece.type == "R" && selectedpiece.color == "W"){
+                textures[i][j].loadFromFile("textures/w_rook.png");
+                interboard[i][j].spirite.setTexture(textures[i][j]);
+                board[i][j] = "RW";
+            }
+            else if(selectedpiece.type == "R" && selectedpiece.color == "B"){
+                textures[i][j].loadFromFile("textures/b_rook.png");
+                interboard[i][j].spirite.setTexture(textures[i][j]);
+                board[i][j] = "RB";
+            }
+            else if(selectedpiece.type == "B" && selectedpiece.color == "W"){
+                textures[i][j].loadFromFile("textures/w_bishop.png");
+                interboard[i][j].spirite.setTexture(textures[i][j]);
+                board[i][j] = "BW";
+            }
+            else if(selectedpiece.type == "B" && selectedpiece.color == "B"){
+                textures[i][j].loadFromFile("textures/b_bishop.png");
+                interboard[i][j].spirite.setTexture(textures[i][j]);
+                board[i][j] = "BB";
+            }
+            else if(selectedpiece.type == "N" && selectedpiece.color == "W"){
+                textures[i][j].loadFromFile("textures/w_knight.png");
+                interboard[i][j].spirite.setTexture(textures[i][j]);
+                board[i][j] = "NW";
+            }
+            else if(selectedpiece.type == "N" && selectedpiece.color == "B"){
+                textures[i][j].loadFromFile("textures/b_knight.png");
+                interboard[i][j].spirite.setTexture(textures[i][j]);
+                board[i][j] = "NB";
+            }
+            else if(selectedpiece.type == "P" && selectedpiece.color == "W"){
+                textures[i][j].loadFromFile("textures/w_pawn.png");
+                interboard[i][j].spirite.setTexture(textures[i][j]);
+                board[i][j] = "PW";
+            }
+            else if(selectedpiece.type == "P" && selectedpiece.color == "B"){
+                textures[i][j].loadFromFile("textures/b_pawn.png");
+                interboard[i][j].spirite.setTexture(textures[i][j]);
+                board[i][j] = "PB";
+            }
+            piece_selected = false;
+            selectedpiece = piece();
+            selected_piece.setString("Selected piece: ");
+            warning.setString("");
+
+
+        }
+
+
+    }
+    if(x>=1060 && x <= 1140 && y>= 630 && y <= 710){
+        if(kings[0].type == "" || kings[1].type == ""){
+            warning.setString("Two kings should be on the board");
+        }
+        else{
+        warning.setString("");
+        selectdone = true;
+        for(int i = 0;i<8;i++){
+        for(int j = 0;j<8;j++){
+            if(board[i][j] == "") board[i][j] == "--";
+            backupboard[i][j] = board[i][j];
+            backupinterboard[i][j] = interboard[i][j];
+        }
+        }
+    }
+    }
+
+}
+void chessboard::right_click_manager(sf::Vector2i position){
+    int row = position.y / 100;
+    int col = position.x / 100;
+    piece empty;
+    if(interboard[row][col].type != ""){
+        interboard[row][col] = empty;
+        piece_selected = false;
+        selectedpiece = piece();
+        selected_piece.setString("Selected piece: ");
+    }
+}
 void chessboard::undo(int startx,int starty,int endx,int endy,string board[8][8],piece interboard[8][8]){
     piece empty;
      interboard[endx][endy] = interboard[startx][starty];
@@ -49,10 +257,44 @@ void chessboard::clickmanager(sf::Vector2i position){
         if(checkmate != 0){
             checkmate = 0;
         }
+        int e = -1;
+        for(int i=0; i<8; i++){
+            for (int j = 0; j < 8; j++){
+            uichess[i][j].cellul.setSize(sf::Vector2f(100,100));
+            if (e == 1)
+                uichess[i][j].cellul.setFillColor(sf::Color::Black);
+            else{
+                uichess[i][j].cellul.setFillColor(sf::Color::White);
+            }
+            e *= -1;
+            uichess[i][j].cellul.setPosition(sf::Vector2f(j*100,i*100));
+            uichess[i][j].cellul.setOutlineThickness(-1);
+            uichess[i][j].cellul.setOutlineColor(sf::Color::Black);
+    }
+    e *= -1;
+    }
         if(turncolor == 1) status.setOutlineColor(sf::Color::Blue);
             else status.setOutlineColor(sf::Color::Red);
             string turn = (turncolor == 1 ? "White" : "Black");
             status.setString(turn + "'s turn");
+    }
+    if(x>=1030 && x <= 1130 && y>=660 && y<= 710){
+        for(int i = 0;i<8;i++){
+        for(int j = 0;j<8;j++){
+            board[i][j] = backupboard[i][j];
+            interboard[i][j] = backupinterboard[i][j];
+        }
+    }
+        fill_board();
+        setup_board();
+        turncolor = 1;
+        checkkingx = -1;
+        checkkingy = -1;
+        checkmate = 0;
+        status.setOutlineColor(sf::Color::Blue);
+        status.setString("White's turn");
+        selected[0] = -1;
+        selected[1] = -1;
     }
     int row = position.y / 100;
     int col = position.x / 100;
@@ -199,7 +441,7 @@ void chessboard::drawboard(){
     for(int i=0; i<8; i++){
         for(int j=0; j<8; j++){
             window->draw(uichess[i][j].cellul);
-            if (board[i][j] != "--"){
+            if (interboard[i][j].type != ""){
                 window->draw(interboard[i][j].spirite);
             }
         }
@@ -221,6 +463,16 @@ void chessboard::drawboard(){
     undotext.setPosition(870,670);
     window->draw(undobutton);
     window->draw(undotext);
+    sf::RectangleShape resetbutton(sf::Vector2f(100,50));
+    resetbutton.setPosition(1030,660);
+    resetbutton.setFillColor(sf::Color::Blue);
+    sf::Text resettext;
+    resettext.setFont(font);
+    resettext.setString("Reset");
+    resettext.setCharacterSize(30);
+    resettext.setPosition(1040,670);
+    window->draw(resetbutton);
+    window->draw(resettext);
     if(checkmate != 0){
         sf::RectangleShape rect(sf::Vector2f(280,280));
         rect.setOutlineThickness(1);
@@ -240,6 +492,117 @@ void chessboard::drawboard(){
         window->draw(rect);
 
     }
+}
+void chessboard::draw_fill_board(){
+    for(int i=0; i<8; i++){
+        for(int j=0; j<8; j++){
+            window->draw(uichess[i][j].cellul);
+            if (interboard[i][j].type != ""){
+                window->draw(interboard[i][j].spirite);
+            }
+        }
+    }
+    sf::RectangleShape background(sf::Vector2f(400,800));
+    background.setPosition(800,0);
+    sf::Texture bg;
+    bg.loadFromFile("textures/background.jpg");
+    uitextures[2] = bg;
+    background.setTexture(&uitextures[2]);
+    window->draw(background);
+    sf::RectangleShape fill_w_pawn(sf::Vector2f(70,70));
+    fill_w_pawn.setPosition(860,100);
+    sf::Texture pawnw;
+    pawnw.loadFromFile("textures/w_pawn.png");
+    uitextures[3] = pawnw;
+    fill_w_pawn.setTexture(&uitextures[3]);
+    window->draw(fill_w_pawn);
+    sf::RectangleShape fill_b_pawn(sf::Vector2f(70,70));
+    fill_b_pawn.setPosition(1060,100);
+    sf::Texture pawnb;
+    pawnb.loadFromFile("textures/b_pawn.png");
+    uitextures[4] = pawnb;
+    fill_b_pawn.setTexture(&uitextures[4]);
+    window->draw(fill_b_pawn);
+    sf::RectangleShape fill_w_rook(sf::Vector2f(70,70));
+    fill_w_rook.setPosition(860,180);
+    sf::Texture rookw;
+    rookw.loadFromFile("textures/w_rook.png");
+    uitextures[5] = rookw;
+    fill_w_rook.setTexture(&uitextures[5]);
+    window->draw(fill_w_rook);
+    sf::RectangleShape fill_b_rook(sf::Vector2f(70,70));
+    fill_b_rook.setPosition(1060,180);
+    sf::Texture rookb;
+    rookb.loadFromFile("textures/b_rook.png");
+    uitextures[6] = rookb;
+    fill_b_rook.setTexture(&uitextures[6]);
+    window->draw(fill_b_rook);
+    sf::RectangleShape fill_w_knight(sf::Vector2f(70,70));
+    fill_w_knight.setPosition(860,260);
+    sf::Texture knightw;
+    knightw.loadFromFile("textures/w_knight.png");
+    uitextures[7] = knightw;
+    fill_w_knight.setTexture(&uitextures[7]);
+    window->draw(fill_w_knight);
+    sf::RectangleShape fill_b_knight(sf::Vector2f(70,70));
+    fill_b_knight.setPosition(1060,260);
+    sf::Texture knightb;
+    knightb.loadFromFile("textures/b_knight.png");
+    uitextures[8] = knightb;
+    fill_b_knight.setTexture(&uitextures[8]);
+    window->draw(fill_b_knight);
+    sf::RectangleShape fill_w_bishop(sf::Vector2f(70,70));
+    fill_w_bishop.setPosition(860,340);
+    sf::Texture bishopw;
+    bishopw.loadFromFile("textures/w_bishop.png");
+    uitextures[9] = bishopw;
+    fill_w_bishop.setTexture(&uitextures[9]);
+    window->draw(fill_w_bishop);
+    sf::RectangleShape fill_b_bishop(sf::Vector2f(70,70));
+    fill_b_bishop.setPosition(1060,340);
+    sf::Texture bishopb;
+    bishopb.loadFromFile("textures/b_bishop.png");
+    uitextures[10] = bishopb;
+    fill_b_bishop.setTexture(&uitextures[10]);
+    window->draw(fill_b_bishop);
+    sf::RectangleShape fill_w_queen(sf::Vector2f(70,70));
+    fill_w_queen.setPosition(860,420);
+    sf::Texture queenw;
+    queenw.loadFromFile("textures/w_queen.png");
+    uitextures[11] = queenw;
+    fill_w_queen.setTexture(&uitextures[11]);
+    window->draw(fill_w_queen);
+    sf::RectangleShape fill_b_queen(sf::Vector2f(70,70));
+    fill_b_queen.setPosition(1060,420);
+    sf::Texture queenb;
+    queenb.loadFromFile("textures/b_queen.png");
+    uitextures[12] = queenb;
+    fill_b_queen.setTexture(&uitextures[12]);
+    window->draw(fill_b_queen);
+    sf::RectangleShape fill_w_king(sf::Vector2f(70,70));
+    fill_w_king.setPosition(860,500);
+    sf::Texture kingw;
+    kingw.loadFromFile("textures/w_king.png");
+    uitextures[13] = kingw;
+    fill_w_king.setTexture(&uitextures[13]);
+    window->draw(fill_w_king);
+    sf::RectangleShape fill_b_king(sf::Vector2f(70,70));
+    fill_b_king.setPosition(1060,500);
+    sf::Texture kingb;
+    kingb.loadFromFile("textures/b_king.png");
+    uitextures[14] = kingb;
+    fill_b_king.setTexture(&uitextures[14]);
+    window->draw(fill_b_king);
+    sf::RectangleShape confirm_piece(sf::Vector2f(80,80));
+    confirm_piece.setPosition(1060,630);
+    sf::Texture confirm_piece_texture;
+    confirm_piece_texture.loadFromFile("textures/done.png");
+    uitextures[15] = confirm_piece_texture;
+    confirm_piece.setTexture(&uitextures[15]);
+    window->draw(confirm_piece);
+    
+    
+
 }
 void chessboard::setup_board(){
     int e = -1;
@@ -267,14 +630,25 @@ void chessboard::setup_board(){
     status.setOutlineThickness(1);
     status.setFillColor(sf::Color::White);
     status.setPosition(sf::Vector2f(885,100));
+    selected_piece.setFont(font);
+    selected_piece.setString("Selected piece: ");
+    selected_piece.setCharacterSize(20);
+    selected_piece.setPosition(860,600);
+    //a warning text indicating that there should be two kings
+    warning.setFont(font);
+    warning.setFillColor(sf::Color::Red);
+    warning.setCharacterSize(15);
+    warning.setPosition(860,630);
+
     
 }
 void chessboard::update_status(){
     status.setString("HELLO");
 }
 void chessboard::fill_board(){
-    string s = sf::Clipboard::getString();
-    cout << s.length() << endl;
+    string s;
+    if(inputs.length()==0) s = sf::Clipboard::getString();
+    else s = inputs;
     int x = 0;
     for (int z = 0; z < s.length(); z+=3) {
             int i = x / 8;
@@ -403,6 +777,12 @@ void chessboard::fill_board(){
             }
         
     }
+    for(int i = 0;i<8;i++){
+        for(int j = 0;j<8;j++){
+            backupboard[i][j] = board[i][j];
+            backupinterboard[i][j] = interboard[i][j];
+        }
+    }
 }
 void chessboard::show_board(){
     for (int i = 0; i < 8; i++) {
@@ -413,6 +793,7 @@ void chessboard::show_board(){
         }
 }
 void chessboard::run(){
+    if(inputtype==1){
     fill_board();
     setup_board();
     window->display();
@@ -430,7 +811,46 @@ void chessboard::run(){
         drawboard();
         window->draw(status);
         window->display();
-
+    }
+    }
+    if(inputtype==2){
+        setup_board();
+        window->display();
+        while(window->isOpen()){
+            sf::Event event;
+            if(!selectdone){
+            while(window->pollEvent(event)){
+                if (event.type == sf::Event::Closed){
+                    window->close();
+                }
+                if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                    fill_board_manager(sf::Mouse::getPosition(*window));
+                }
+                if (sf::Mouse::isButtonPressed(sf::Mouse::Right)){
+                    right_click_manager(sf::Mouse::getPosition(*window));
+                }
+            }
+            window->clear(sf::Color::White);
+            draw_fill_board();
+            window->draw(selected_piece);
+            window->draw(warning);
+            window->display();
+            }
+            else{
+                while(window->pollEvent(event)){
+                if (event.type == sf::Event::Closed){
+                    window->close();
+                }
+                if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                    clickmanager(sf::Mouse::getPosition(*window));
+                }
+            }
+            window->clear(sf::Color::White);
+            drawboard();
+            window->draw(status);
+            window->display();
+            }
+        }
     }
 }
 bool chessboard::move(string type,int startx,int starty,int endx,int endy,piece interboard[8][8],string boarde[8][8]){

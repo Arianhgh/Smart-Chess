@@ -6,11 +6,19 @@ class chessboard{
     sf::RenderWindow* window;
     sf::Font font;
     sf::Text status;
-    chessboard(sf::RenderWindow* _window){
+    sf::Text selected_piece;
+    sf::Text warning;
+    string inputs;
+    int inputtype;
+    chessboard(sf::RenderWindow* _window,int _inputtype = 1){
         window = _window;
+        inputtype = _inputtype;
         window->setFramerateLimit(60);
     }
     int turn = 1;
+    bool piece_selected = false;
+    bool selectdone = false;
+    piece selectedpiece;
     map<vector<int>, bool> checker;
     vector<vector<int>> undo_moves;
     vector<string> undo_strs;
@@ -22,7 +30,7 @@ class chessboard{
     vector<string> finalresults;
     vector<int> moves;
     sf::Texture textures[8][8];
-    sf::Texture uitextures[3];
+    sf::Texture uitextures[16];
     int selected[2] = {-1,-1};
     int turncolor = 1;
     int checkkingx = -1;
@@ -34,6 +42,8 @@ class chessboard{
     int flag = 0;
     string board[8][8];
     piece interboard[8][8];
+    string backupboard[8][8];
+    piece backupinterboard[8][8];
     king kings[2];
     cell uichess[8][8];
     void fill_board();
@@ -47,4 +57,8 @@ class chessboard{
     void clickmanager(sf::Vector2i position);
     void drawboard();
     void undo(int startx,int starty,int endx,int endy,string board[8][8],piece interboard[8][8]);
+    void fill_board_manager(sf::Vector2i position);
+    void draw_fill_board();
+    void right_click_manager(sf::Vector2i position);
 };
+

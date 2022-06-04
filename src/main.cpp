@@ -1,10 +1,11 @@
 #include "board.h"
 using namespace sf;
 int main(){
-    string colormode;
+    cout << "how do you want to input the board?\n1.clipboard\n2.by hand\n";
+    int input;
+    cin >> input;
     RenderWindow window(VideoMode(1200, 800), "Chess", Style::Titlebar | Style::Close);
-    chessboard A(&window);
+    chessboard A(&window,input);
     A.run();
-    int color = (colormode[0] == 'B')? -1: 1;
     return 0;
 }
