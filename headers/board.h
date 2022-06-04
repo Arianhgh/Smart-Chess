@@ -10,12 +10,17 @@ class chessboard{
     sf::Text warning;
     string inputs;
     int inputtype;
-    chessboard(sf::RenderWindow* _window,int _inputtype = 1){
+    int turncolor;
+    int backupturncolor;
+    chessboard(sf::RenderWindow* _window,int _inputtype = 1, int _turncolor = 1){
         window = _window;
         inputtype = _inputtype;
+        turncolor = _turncolor;
+        backupturncolor = _turncolor;
         window->setFramerateLimit(60);
     }
     int turn = 1;
+    
     bool piece_selected = false;
     bool selectdone = false;
     piece selectedpiece;
@@ -32,7 +37,6 @@ class chessboard{
     sf::Texture textures[8][8];
     sf::Texture uitextures[16];
     int selected[2] = {-1,-1};
-    int turncolor = 1;
     int checkkingx = -1;
     int checkkingy = -1;
     int checkmate = 0;
@@ -49,7 +53,7 @@ class chessboard{
     void fill_board();
     void show_board();
     bool move(string type,int startx,int starty,int endx,int endy,piece interboard[8][8],string boarde[8][8]);
-    bool find_dangerw(int color,int step,piece boarde[8][8],string board[8][8],int startx,int starty);
+    bool find_dangerw(int color,int step,piece boarde[8][8],string board[8][8]);
     bool find_dangerd(int color,int step,piece boarde[8][8],string board[8][8]);
     void run();
     void setup_board();
