@@ -293,7 +293,7 @@ void chessboard::clickmanager(sf::Vector2i position){
             interboard[i][j] = backupinterboard[i][j];
         }
     }
-        cout << backupturncolor << "color" << endl;
+        //cout << backupturncolor << "color" << endl;
         turncolor = backupturncolor;
         fill_board();
         setup_board();
@@ -317,7 +317,10 @@ void chessboard::clickmanager(sf::Vector2i position){
     int colores = (turncolor==1)?0:1;
     if(x>=860 && x <=1130 && y >= 600 && y <= 650){
         if(selected[0] != -1){
-            cout << selected[0] << " " << selected[1] << endl;
+            int oldx = kings[0].position_x;
+            int oldy = kings[0].position_y;
+            int oldx1 = kings[1].position_x;
+            int oldy1 = kings[1].position_y;
             row = selected[0];
             col = selected[1];
             for(int i=0;i<interboard[selected[0]][selected[1]].allmoves.size()-1;i+=2){
@@ -338,7 +341,7 @@ void chessboard::clickmanager(sf::Vector2i position){
             undo(selected[0],selected[1],tmpboard[row][col].allmoves[i],tmpboard[row][col].allmoves[i+1],tmpboards,tmpboard);
             result.push_back({row,col,tmpboard[row][col].allmoves[i],tmpboard[row][col].allmoves[i+1]});
             bool res = find_dangerd(-turncolor,2,tmpboard,tmpboards);
-            cout <<"bool"<< res << endl;
+            //cout <<"bool"<< res << endl;
             if (result.size() >= 1 && flag == 1){
                     results.push_back(result[0]);
                                     }
@@ -348,7 +351,7 @@ void chessboard::clickmanager(sf::Vector2i position){
             tmpboard[tmpboard[row][col].allmoves[i]][tmpboard[row][col].allmoves[i+1]] = tmp;
             tmpboards[tmpboard[row][col].allmoves[i]][tmpboard[row][col].allmoves[i+1]] = temp;
         }
-        cout << results.size() << endl;
+       // cout << results.size() << endl;
         for(int i=0;i<interboard[row][col].allmoves.size();i+=2){
             if(interboard[row][col].allmoves.size()==0){
                  cout << "no moves" << endl;
@@ -363,6 +366,8 @@ void chessboard::clickmanager(sf::Vector2i position){
 
             }
         }
+        kings[0].update_pos(oldx,oldy);
+        kings[1].update_pos(oldx1,oldy1);
         }
         return;
     }
@@ -393,7 +398,7 @@ void chessboard::clickmanager(sf::Vector2i position){
             undo(selected[0],selected[1],tmpboard[row][col].allmoves[i],tmpboard[row][col].allmoves[i+1],tmpboards,tmpboard);
             result.push_back({row,col,tmpboard[row][col].allmoves[i],tmpboard[row][col].allmoves[i+1]});
             bool res = find_dangerw(-turncolor,2,tmpboard,tmpboards);
-            cout <<"bool"<< res << endl;
+            //cout <<"bool"<< res << endl;
             if (result.size() >= 1 && flag == 1){
                     results1.push_back(result[0]);
                                     }
@@ -403,9 +408,9 @@ void chessboard::clickmanager(sf::Vector2i position){
             tmpboard[tmpboard[row][col].allmoves[i]][tmpboard[row][col].allmoves[i+1]] = tmp;
             tmpboards[tmpboard[row][col].allmoves[i]][tmpboard[row][col].allmoves[i+1]] = temp;
         }
-        cout << 12345<<endl;
-        cout << results1.size() << endl;
-        cout << interboard[row][col].allmoves.size() << endl;
+       // cout << 12345<<endl;
+       // cout << results1.size() << endl;
+       // cout << interboard[row][col].allmoves.size() << endl;
         for(int i=0;i<interboard[row][col].allmoves.size();i+=2){
             if(interboard[row][col].allmoves.size()==0){
                  cout << "no moves" << endl;
@@ -415,7 +420,7 @@ void chessboard::clickmanager(sf::Vector2i position){
             for(int j = 0;j<results1.size();j++){
                 if(results1[j][2] == interboard[row][col].allmoves[i] && results1[j][3] == interboard[row][col].allmoves[i+1]){
                     uichess[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]].cellul.setFillColor(sf::Color::Cyan);
-                    cout << interboard[row][col].allmoves[i] << " " << interboard[row][col].allmoves[i+1] << endl;
+                    //cout << interboard[row][col].allmoves[i] << " " << interboard[row][col].allmoves[i+1] << endl;
                 }
 
             }
@@ -424,9 +429,9 @@ void chessboard::clickmanager(sf::Vector2i position){
         kings[1].update_pos(oldx1,oldy1);
         }
         
-        cout << "kings" << endl;
-        cout << kings[0].position_x << " " << kings[0].position_y << endl;
-        cout << kings[1].position_x << " " << kings[1].position_y << endl;
+       // cout << "kings" << endl;
+        //cout << kings[0].position_x << " " << kings[0].position_y << endl;
+       // cout << kings[1].position_x << " " << kings[1].position_y << endl;
         return;
     }
     if (row > 7 || col > 7) return;
@@ -456,7 +461,7 @@ void chessboard::clickmanager(sf::Vector2i position){
              interboard[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]] = tmp;
              board[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]] = temp;
              }
-             cout << interboard[row][col].allmoves.size() << endl;
+             //cout << interboard[row][col].allmoves.size() << endl;
             
         }
         for(int i=0;i<interboard[row][col].allmoves.size();i+=2){
@@ -807,11 +812,17 @@ void chessboard::setup_board(){
     selected_piece.setString("Selected piece: ");
     selected_piece.setCharacterSize(20);
     selected_piece.setPosition(860,600);
-    //a warning text indicating that there should be two kings
     warning.setFont(font);
     warning.setFillColor(sf::Color::Red);
     warning.setCharacterSize(15);
     warning.setPosition(860,630);
+    // a text to let the player know he can remove a piece by right clicking on it
+    remove_piece.setFont(font);
+    remove_piece.setFillColor(sf::Color::Red);  
+    remove_piece.setCharacterSize(15);
+    remove_piece.setPosition(860,650);
+    remove_piece.setString("Right click to remove a piece");
+
 
     
 }
@@ -969,7 +980,10 @@ void chessboard::run(){
     if(inputtype==1){
     fill_board();
     setup_board();
+    music.openFromFile("textures/music.wav");
+    music.setLoop(true);
     window->display();
+    music.play();
     while(window->isOpen()){
         sf::Event event;
         while(window->pollEvent(event)){
@@ -988,7 +1002,10 @@ void chessboard::run(){
     }
     if(inputtype==2){
         setup_board();
+        music.openFromFile("textures/music.wav");
+        music.setLoop(true);
         window->display();
+        music.play();
         while(window->isOpen()){
             sf::Event event;
             if(!selectdone){
@@ -1005,11 +1022,13 @@ void chessboard::run(){
             }
             window->clear(sf::Color::White);
             draw_fill_board();
+            window->draw(remove_piece);
             window->draw(selected_piece);
             window->draw(warning);
             window->display();
             }
             else{
+
                 while(window->pollEvent(event)){
                 if (event.type == sf::Event::Closed){
                     window->close();

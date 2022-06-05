@@ -1,6 +1,7 @@
 #pragma once
 #include "kings.h"
 #include "cells.h"
+#include <SFML/Audio.hpp>
 class chessboard{
     public:
     sf::RenderWindow* window;
@@ -8,6 +9,8 @@ class chessboard{
     sf::Text status;
     sf::Text selected_piece;
     sf::Text warning;
+    sf::Text remove_piece;
+    sf::Music music;
     string inputs;
     int inputtype;
     int turncolor;

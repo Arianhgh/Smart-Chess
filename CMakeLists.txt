@@ -13,4 +13,5 @@ add_executable(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME}
     sfml-system
     sfml-window
-    sfml-graphics)
+    sfml-graphics
+    sfml-audio)
