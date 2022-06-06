@@ -94,9 +94,11 @@ void chessboard::fill_board_manager(sf::Vector2i position){
             int j = col;
             if(kings[0].position_x == row && kings[0].position_y == col){
                 kings[0] = king();
+                kingsi ++;
             }
             else if (kings[1].position_x == row && kings[0].position_y == col){
                 kings[1] = king();
+                kingsi ++;
             }
             interboard[row][col] = selectedpiece;
             interboard[row][col].position_x = row;
@@ -104,19 +106,22 @@ void chessboard::fill_board_manager(sf::Vector2i position){
             interboard[i][j].spirite.setOrigin(-35,-25);
             interboard[i][j].spirite.setPosition(sf::Vector2f(j * 100,i * 100));
             interboard[i][j].spirite.scale(sf::Vector2f(.5f, .5f));
-            if(selectedpiece.type == "K" && selectedpiece.color == "W"){
+            if(selectedpiece.type == "K" && selectedpiece.color == "W" && kingsi >= 0){
                 king kingw("K","W",row,col);
                 kings[0] = kingw;
                 textures[i][j].loadFromFile("textures/w_king.png");
                 interboard[i][j].spirite.setTexture(textures[i][j]);
                 board[i][j] = "KW";
+                kingsi -= 1;
+                
             }
-            else if(selectedpiece.type == "K" && selectedpiece.color == "B"){
+            else if(selectedpiece.type == "K" && selectedpiece.color == "B" && kingsi >= 0){
                 king kingb("K","B",row,col);
                 kings[1] = kingb;
                 textures[i][j].loadFromFile("textures/b_king.png");
                 interboard[i][j].spirite.setTexture(textures[i][j]);
                 board[i][j] = "KB";
+                kingsi -= 1;
             }
             else if(selectedpiece.type == "Q" && selectedpiece.color == "W"){
                 textures[i][j].loadFromFile("textures/w_queen.png");
@@ -185,6 +190,9 @@ void chessboard::fill_board_manager(sf::Vector2i position){
         else if(abs(kings[0].position_x - kings[1].position_x)<= 1 && abs(kings[0].position_y - kings[1].position_y)<= 1){
             warning.setString("Kings should be at least 2 squares apart");
         }
+        else if(kings[0].checkmate(interboard) || kings[1].checkmate(interboard)){
+            warning.setString("One of the kings is in checkmate");
+        }
         else{
         warning.setString("");
         selectdone = true;
@@ -204,6 +212,9 @@ void chessboard::right_click_manager(sf::Vector2i position){
     int col = position.x / 100;
     piece empty;
     if(interboard[row][col].type != ""){
+        if(interboard[row][col].type == "K"){
+            kingsi ++;
+        }
         interboard[row][col] = empty;
         piece_selected = false;
         selectedpiece = piece();
@@ -248,7 +259,7 @@ void chessboard::clickmanager(sf::Vector2i position){
                 }
         else{
             if((checkkingx + checkkingy) % 2 == 1){
-                    uichess[checkkingx][checkkingy].cellul.setFillColor(sf::Color::Black);
+                    uichess[checkkingx][checkkingy].cellul.setFillColor(sf::Color{0,20,50});
                 }
                 else{
                     uichess[checkkingx][checkkingy].cellul.setFillColor(sf::Color::White);
@@ -265,7 +276,7 @@ void chessboard::clickmanager(sf::Vector2i position){
             for (int j = 0; j < 8; j++){
             uichess[i][j].cellul.setSize(sf::Vector2f(100,100));
             if (e == 1)
-                uichess[i][j].cellul.setFillColor(sf::Color::Black);
+                uichess[i][j].cellul.setFillColor(sf::Color{0,20,50});
             else{
                 uichess[i][j].cellul.setFillColor(sf::Color::White);
             }
@@ -286,7 +297,7 @@ void chessboard::clickmanager(sf::Vector2i position){
                     checkkingy = kings[colores].position_y;
                 }
     }
-    if(x>=1030 && x <= 1130 && y>=660 && y<= 710){
+    else if(x>=1030 && x <= 1130 && y>=660 && y<= 710){
         for(int i = 0;i<8;i++){
         for(int j = 0;j<8;j++){
             board[i][j] = backupboard[i][j];
@@ -310,6 +321,16 @@ void chessboard::clickmanager(sf::Vector2i position){
         }
         selected[0] = -1;
         selected[1] = -1;
+    }
+    else if(x>= 850 && x <= 950 && y>= 430 && y <= 530){
+        if(sound == true){
+            sound = false;
+            mutebutton.setTexture(&uitextures[16]);
+        }
+        else{
+            sound = true;
+            mutebutton.setTexture(&uitextures[17]);
+        }
     }
     int row = position.y / 100;
     int col = position.x / 100;
@@ -371,7 +392,7 @@ void chessboard::clickmanager(sf::Vector2i position){
         }
         return;
     }
-    if(x>=860 && x <= 1130 && y>= 540 && y <= 590){
+    else if(x>=860 && x <= 1130 && y>= 540 && y <= 590){
         if(selected[0] != -1){
             int oldx = kings[0].position_x;
             int oldy = kings[0].position_y;
@@ -439,7 +460,7 @@ void chessboard::clickmanager(sf::Vector2i position){
         selected[0] = row;
         selected[1] = col;
         lastcolor = uichess[row][col].cellul.getFillColor();
-        uichess[row][col].cellul.setFillColor(sf::Color::Yellow);
+        uichess[row][col].cellul.setFillColor(sf::Color{255,215,0});
         interboard[row][col].possiblemoves(row,col,interboard,colores);
         for(int i=0;i<interboard[row][col].allmoves.size()-1;i+=2){
              if(interboard[row][col].allmoves.size()==0){
@@ -469,7 +490,7 @@ void chessboard::clickmanager(sf::Vector2i position){
                  cout << "no moves" << endl;
                  break;
              }
-            uichess[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]].cellul.setFillColor(sf::Color::Green);
+            uichess[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]].cellul.setFillColor(sf::Color{50,205,50});
 
         }
     }
@@ -485,7 +506,7 @@ void chessboard::clickmanager(sf::Vector2i position){
                 want_to_move = true;
             }
             if((interboard[selected[0]][selected[1]].allmoves[i]+interboard[selected[0]][selected[1]].allmoves[i+1])%2==1){
-                uichess[interboard[selected[0]][selected[1]].allmoves[i]][interboard[selected[0]][selected[1]].allmoves[i+1]].cellul.setFillColor(sf::Color::Black);
+                uichess[interboard[selected[0]][selected[1]].allmoves[i]][interboard[selected[0]][selected[1]].allmoves[i+1]].cellul.setFillColor(sf::Color{0,20,50});
             }
             else{
                 uichess[interboard[selected[0]][selected[1]].allmoves[i]][interboard[selected[0]][selected[1]].allmoves[i+1]].cellul.setFillColor(sf::Color::White);
@@ -502,7 +523,7 @@ void chessboard::clickmanager(sf::Vector2i position){
             if(checkkingx != -1){
             if (!kings[colores].is_check(interboard)){
                 if((checkkingx + checkkingy) % 2 == 1){
-                    uichess[checkkingx][checkkingy].cellul.setFillColor(sf::Color::Black);
+                    uichess[checkkingx][checkkingy].cellul.setFillColor(sf::Color{0,20,50});
                 }
                 else{
                     uichess[checkkingx][checkkingy].cellul.setFillColor(sf::Color::White);
@@ -547,7 +568,7 @@ void chessboard::clickmanager(sf::Vector2i position){
                 selected[0] = row;
                 selected[1] = col;
                 lastcolor = uichess[row][col].cellul.getFillColor();
-                uichess[row][col].cellul.setFillColor(sf::Color::Yellow);
+                uichess[row][col].cellul.setFillColor(sf::Color{255,215,0});
                 interboard[row][col].possiblemoves(row,col,interboard,colores);
                 for(int i=0;i<interboard[row][col].allmoves.size()-1;i+=2){
                     if(interboard[row][col].allmoves.size()==0){
@@ -575,7 +596,7 @@ void chessboard::clickmanager(sf::Vector2i position){
                  cout << "no moves" << endl;
                  break;
              }
-            uichess[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]].cellul.setFillColor(sf::Color::Green);
+            uichess[interboard[row][col].allmoves[i]][interboard[row][col].allmoves[i+1]].cellul.setFillColor(sf::Color{50,205,50});
         }
         }
             }
@@ -641,6 +662,8 @@ void chessboard::drawboard(){
     hinttext2.setFillColor(sf::Color::Black);
     window->draw(hintbutton2);
     window->draw(hinttext2);
+    window->draw(mutebutton);
+    
     if(checkmate != 0){
         sf::RectangleShape rect(sf::Vector2f(280,280));
         rect.setOutlineThickness(1);
@@ -768,6 +791,7 @@ void chessboard::draw_fill_board(){
     uitextures[15] = confirm_piece_texture;
     confirm_piece.setTexture(&uitextures[15]);
     window->draw(confirm_piece);
+
     
     
 
@@ -778,7 +802,7 @@ void chessboard::setup_board(){
         for (int j = 0; j < 8; j++){
             uichess[i][j].cellul.setSize(sf::Vector2f(100,100));
             if (e == 1)
-                uichess[i][j].cellul.setFillColor(sf::Color::Black);
+                uichess[i][j].cellul.setFillColor(sf::Color{0,20,50});
             else{
                 uichess[i][j].cellul.setFillColor(sf::Color::White);
             }
@@ -816,12 +840,16 @@ void chessboard::setup_board(){
     warning.setFillColor(sf::Color::Red);
     warning.setCharacterSize(15);
     warning.setPosition(860,630);
-    // a text to let the player know he can remove a piece by right clicking on it
     remove_piece.setFont(font);
     remove_piece.setFillColor(sf::Color::Red);  
     remove_piece.setCharacterSize(15);
     remove_piece.setPosition(860,650);
     remove_piece.setString("Right click to remove a piece");
+    mutebutton.setSize((sf::Vector2f(100,100)));
+    mutebutton.setPosition(850,430);
+    uitextures[16].loadFromFile("textures/mute.png");
+    uitextures[17].loadFromFile("textures/unmute.png");
+    mutebutton.setTexture(&uitextures[17]);
 
 
     
@@ -992,6 +1020,14 @@ void chessboard::run(){
             }
             if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
                 clickmanager(sf::Mouse::getPosition(*window));
+                if(!sound){
+                music.pause();
+                laststate = false;
+                }
+                else if(sound && laststate == false){
+                music.play();
+                laststate = true;
+                 }
             }
         }
         window->clear(sf::Color::White);
@@ -1002,10 +1038,10 @@ void chessboard::run(){
     }
     if(inputtype==2){
         setup_board();
+        int e = 0;
         music.openFromFile("textures/music.wav");
         music.setLoop(true);
         window->display();
-        music.play();
         while(window->isOpen()){
             sf::Event event;
             if(!selectdone){
@@ -1028,13 +1064,24 @@ void chessboard::run(){
             window->display();
             }
             else{
-
+                if (e == 0){
+                    music.play();
+                    e = 1;
+                }
                 while(window->pollEvent(event)){
                 if (event.type == sf::Event::Closed){
                     window->close();
                 }
                 if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
                     clickmanager(sf::Mouse::getPosition(*window));
+                    if(!sound){
+                    music.pause();
+                    laststate = false;
+                    }
+                    else if (sound && laststate == false){
+                    music.play();
+                    laststate = true;
+                     }
                 }
             }
             window->clear(sf::Color::White);

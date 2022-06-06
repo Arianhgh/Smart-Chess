@@ -11,6 +11,7 @@ class chessboard{
     sf::Text warning;
     sf::Text remove_piece;
     sf::Music music;
+    sf::RectangleShape mutebutton;
     string inputs;
     int inputtype;
     int turncolor;
@@ -23,9 +24,10 @@ class chessboard{
         window->setFramerateLimit(60);
     }
     int turn = 1;
-    
+    bool laststate = true;
     bool piece_selected = false;
     bool selectdone = false;
+    bool sound = true;
     piece selectedpiece;
     map<vector<int>, bool> checker;
     vector<vector<int>> undo_moves;
@@ -38,11 +40,12 @@ class chessboard{
     vector<string> finalresults;
     vector<int> moves;
     sf::Texture textures[8][8];
-    sf::Texture uitextures[16];
+    sf::Texture uitextures[18];
     int selected[2] = {-1,-1};
     int checkkingx = -1;
     int checkkingy = -1;
     int checkmate = 0;
+    int kingsi = 1;
     sf::Color lastcolor;
     int u = 0;
     int we = 0;
