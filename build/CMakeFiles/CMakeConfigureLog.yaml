@@ -1,0 +1,1430 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.22000 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Microsoft (R) Build Engine version 14.0.25420.1
+      Copyright (C) Microsoft Corporation. All rights reserved.
+      
+      Build started 2023-08-15 12:21:33 AM.
+      Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /nologo /W0 /WX- /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc140.pdb" /Gd /TC /analyze- /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdC\\.\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:01.38
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/3.27.2/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Microsoft (R) Build Engine version 14.0.25420.1
+      Copyright (C) Microsoft Corporation. All rights reserved.
+      
+      Build started 2023-08-15 12:21:35 AM.
+      Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /nologo /W0 /WX- /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X86 /SAFESEH Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdCXX\\.\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.57
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/3.27.2/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-rfhr46"
+      binary: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-rfhr46"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-rfhr46'
+        
+        Run Build Command(s): "C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" cmTC_f8a6e.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=14.0 /v:n
+        Microsoft (R) Build Engine version 14.0.25420.1
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 2023-08-15 12:21:36 AM.
+        Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rfhr46\\cmTC_f8a6e.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_f8a6e.dir\\Debug\\".
+          Creating directory "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rfhr46\\Debug\\".
+          Creating directory "cmTC_f8a6e.dir\\Debug\\cmTC_f8a6e.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_f8a6e.dir\\Debug\\cmTC_f8a6e.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f8a6e.dir\\Debug\\\\" /Fd"cmTC_f8a6e.dir\\Debug\\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x86
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          
+          CMakeCCompilerABI.c
+          cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f8a6e.dir\\Debug\\\\" /Fd"cmTC_f8a6e.dir\\Debug\\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+          
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rfhr46\\Debug\\cmTC_f8a6e.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-rfhr46/Debug/cmTC_f8a6e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-rfhr46/Debug/cmTC_f8a6e.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_f8a6e.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_f8a6e.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rfhr46\\Debug\\cmTC_f8a6e.exe
+          cmTC_f8a6e.vcxproj -> C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-rfhr46/Debug/cmTC_f8a6e.pdb (Full PDB)
+        FinalizeBuildStatus:
+          Deleting file "cmTC_f8a6e.dir\\Debug\\cmTC_f8a6e.tlog\\unsuccessfulbuild".
+          Touching "cmTC_f8a6e.dir\\Debug\\cmTC_f8a6e.tlog\\cmTC_f8a6e.lastbuildstate".
+        Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rfhr46\\cmTC_f8a6e.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.91
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-z22uvm"
+      binary: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-z22uvm"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-z22uvm'
+        
+        Run Build Command(s): "C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" cmTC_87986.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=14.0 /v:n
+        Microsoft (R) Build Engine version 14.0.25420.1
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 2023-08-15 12:21:37 AM.
+        Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z22uvm\\cmTC_87986.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_87986.dir\\Debug\\".
+          Creating directory "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z22uvm\\Debug\\".
+          Creating directory "cmTC_87986.dir\\Debug\\cmTC_87986.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_87986.dir\\Debug\\cmTC_87986.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_87986.dir\\Debug\\\\" /Fd"cmTC_87986.dir\\Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x86
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          
+          CMakeCXXCompilerABI.cpp
+          cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_87986.dir\\Debug\\\\" /Fd"cmTC_87986.dir\\Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+          
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z22uvm\\Debug\\cmTC_87986.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-z22uvm/Debug/cmTC_87986.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-z22uvm/Debug/cmTC_87986.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_87986.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_87986.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z22uvm\\Debug\\cmTC_87986.exe
+          cmTC_87986.vcxproj -> C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-z22uvm/Debug/cmTC_87986.pdb (Full PDB)
+        FinalizeBuildStatus:
+          Deleting file "cmTC_87986.dir\\Debug\\cmTC_87986.tlog\\unsuccessfulbuild".
+          Touching "cmTC_87986.dir\\Debug\\cmTC_87986.tlog\\cmTC_87986.lastbuildstate".
+        Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z22uvm\\cmTC_87986.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.66
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/Internal/FeatureTesting.cmake:34 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/Compiler/MSVC-CXX.cmake:77 (_record_compiler_features)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompileFeatures.cmake:70 (cmake_record_cxx_compile_features)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:70 (CMAKE_DETERMINE_COMPILE_FEATURES)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compile features"
+    directories:
+      source: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-l717m8"
+      binary: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-l717m8"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "CMAKE_CXX_FEATURE_TEST"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-l717m8'
+        
+        Run Build Command(s): "C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" cmTC_ef96e.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=14.0 /v:n
+        Microsoft (R) Build Engine version 14.0.25420.1
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 2023-08-15 12:21:38 AM.
+        Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l717m8\\cmTC_ef96e.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_ef96e.dir\\Debug\\".
+          Creating directory "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l717m8\\Debug\\".
+          Creating directory "cmTC_ef96e.dir\\Debug\\cmTC_ef96e.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_ef96e.dir\\Debug\\cmTC_ef96e.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ef96e.dir\\Debug\\\\" /Fd"cmTC_ef96e.dir\\Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l717m8\\feature_tests.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x86
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          
+          feature_tests.cxx
+          cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ef96e.dir\\Debug\\\\" /Fd"cmTC_ef96e.dir\\Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l717m8\\feature_tests.cxx"
+          
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l717m8\\Debug\\cmTC_ef96e.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-l717m8/Debug/cmTC_ef96e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-l717m8/Debug/cmTC_ef96e.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_ef96e.dir\\Debug\\feature_tests.obj
+          cmTC_ef96e.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l717m8\\Debug\\cmTC_ef96e.exe
+          cmTC_ef96e.vcxproj -> C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-l717m8/Debug/cmTC_ef96e.pdb (Full PDB)
+        FinalizeBuildStatus:
+          Deleting file "cmTC_ef96e.dir\\Debug\\cmTC_ef96e.tlog\\unsuccessfulbuild".
+          Touching "cmTC_ef96e.dir\\Debug\\cmTC_ef96e.tlog\\cmTC_ef96e.lastbuildstate".
+        Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l717m8\\cmTC_ef96e.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.64
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.22000 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Microsoft (R) Build Engine version 14.0.25420.1
+      Copyright (C) Microsoft Corporation. All rights reserved.
+      
+      Build started 2023-08-15 12:30:25 AM.
+      Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /nologo /W0 /WX- /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc140.pdb" /Gd /TC /analyze- /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdC\\.\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.47
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/3.27.2/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Microsoft (R) Build Engine version 14.0.25420.1
+      Copyright (C) Microsoft Corporation. All rights reserved.
+      
+      Build started 2023-08-15 12:30:26 AM.
+      Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /nologo /W0 /WX- /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X86 /SAFESEH Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdCXX\\.\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.49
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/3.27.2/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-he6s41"
+      binary: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-he6s41"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-he6s41'
+        
+        Run Build Command(s): "C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" cmTC_cd925.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=14.0 /v:n
+        Microsoft (R) Build Engine version 14.0.25420.1
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 2023-08-15 12:30:26 AM.
+        Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-he6s41\\cmTC_cd925.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_cd925.dir\\Debug\\".
+          Creating directory "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-he6s41\\Debug\\".
+          Creating directory "cmTC_cd925.dir\\Debug\\cmTC_cd925.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_cd925.dir\\Debug\\cmTC_cd925.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_cd925.dir\\Debug\\\\" /Fd"cmTC_cd925.dir\\Debug\\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x86
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          
+          CMakeCCompilerABI.c
+          cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_cd925.dir\\Debug\\\\" /Fd"cmTC_cd925.dir\\Debug\\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+          
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-he6s41\\Debug\\cmTC_cd925.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-he6s41/Debug/cmTC_cd925.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-he6s41/Debug/cmTC_cd925.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_cd925.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_cd925.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-he6s41\\Debug\\cmTC_cd925.exe
+          cmTC_cd925.vcxproj -> C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-he6s41/Debug/cmTC_cd925.pdb (Full PDB)
+        FinalizeBuildStatus:
+          Deleting file "cmTC_cd925.dir\\Debug\\cmTC_cd925.tlog\\unsuccessfulbuild".
+          Touching "cmTC_cd925.dir\\Debug\\cmTC_cd925.tlog\\cmTC_cd925.lastbuildstate".
+        Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-he6s41\\cmTC_cd925.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.58
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-rke4f4"
+      binary: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-rke4f4"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-rke4f4'
+        
+        Run Build Command(s): "C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" cmTC_ac15d.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=14.0 /v:n
+        Microsoft (R) Build Engine version 14.0.25420.1
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 2023-08-15 12:30:27 AM.
+        Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rke4f4\\cmTC_ac15d.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_ac15d.dir\\Debug\\".
+          Creating directory "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rke4f4\\Debug\\".
+          Creating directory "cmTC_ac15d.dir\\Debug\\cmTC_ac15d.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_ac15d.dir\\Debug\\cmTC_ac15d.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ac15d.dir\\Debug\\\\" /Fd"cmTC_ac15d.dir\\Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x86
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          
+          CMakeCXXCompilerABI.cpp
+          cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ac15d.dir\\Debug\\\\" /Fd"cmTC_ac15d.dir\\Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+          
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rke4f4\\Debug\\cmTC_ac15d.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-rke4f4/Debug/cmTC_ac15d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-rke4f4/Debug/cmTC_ac15d.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_ac15d.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_ac15d.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rke4f4\\Debug\\cmTC_ac15d.exe
+          cmTC_ac15d.vcxproj -> C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-rke4f4/Debug/cmTC_ac15d.pdb (Full PDB)
+        FinalizeBuildStatus:
+          Deleting file "cmTC_ac15d.dir\\Debug\\cmTC_ac15d.tlog\\unsuccessfulbuild".
+          Touching "cmTC_ac15d.dir\\Debug\\cmTC_ac15d.tlog\\cmTC_ac15d.lastbuildstate".
+        Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rke4f4\\cmTC_ac15d.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.62
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/Internal/FeatureTesting.cmake:34 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/Compiler/MSVC-CXX.cmake:77 (_record_compiler_features)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompileFeatures.cmake:70 (cmake_record_cxx_compile_features)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:70 (CMAKE_DETERMINE_COMPILE_FEATURES)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compile features"
+    directories:
+      source: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-n54hyc"
+      binary: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-n54hyc"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "CMAKE_CXX_FEATURE_TEST"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-n54hyc'
+        
+        Run Build Command(s): "C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" cmTC_b1675.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=14.0 /v:n
+        Microsoft (R) Build Engine version 14.0.25420.1
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 2023-08-15 12:30:28 AM.
+        Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n54hyc\\cmTC_b1675.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_b1675.dir\\Debug\\".
+          Creating directory "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n54hyc\\Debug\\".
+          Creating directory "cmTC_b1675.dir\\Debug\\cmTC_b1675.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_b1675.dir\\Debug\\cmTC_b1675.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_b1675.dir\\Debug\\\\" /Fd"cmTC_b1675.dir\\Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n54hyc\\feature_tests.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x86
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          
+          feature_tests.cxx
+          cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_b1675.dir\\Debug\\\\" /Fd"cmTC_b1675.dir\\Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n54hyc\\feature_tests.cxx"
+          
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n54hyc\\Debug\\cmTC_b1675.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-n54hyc/Debug/cmTC_b1675.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-n54hyc/Debug/cmTC_b1675.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_b1675.dir\\Debug\\feature_tests.obj
+          cmTC_b1675.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n54hyc\\Debug\\cmTC_b1675.exe
+          cmTC_b1675.vcxproj -> C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-n54hyc/Debug/cmTC_b1675.pdb (Full PDB)
+        FinalizeBuildStatus:
+          Deleting file "cmTC_b1675.dir\\Debug\\cmTC_b1675.tlog\\unsuccessfulbuild".
+          Touching "cmTC_b1675.dir\\Debug\\cmTC_b1675.tlog\\cmTC_b1675.lastbuildstate".
+        Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n54hyc\\cmTC_b1675.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.62
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.22000 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Microsoft (R) Build Engine version 14.0.25420.1
+      Copyright (C) Microsoft Corporation. All rights reserved.
+      
+      Build started 2023-08-15 12:33:05 AM.
+      Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /nologo /W0 /WX- /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc140.pdb" /Gd /TC /analyze- /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdC\\.\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.46
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/3.27.2/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Microsoft (R) Build Engine version 14.0.25420.1
+      Copyright (C) Microsoft Corporation. All rights reserved.
+      
+      Build started 2023-08-15 12:33:05 AM.
+      Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /nologo /W0 /WX- /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X86 /SAFESEH Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdCXX\\.\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.47
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/3.27.2/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-md7zqu"
+      binary: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-md7zqu"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-md7zqu'
+        
+        Run Build Command(s): "C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" cmTC_2864b.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=14.0 /v:n
+        Microsoft (R) Build Engine version 14.0.25420.1
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 2023-08-15 12:33:06 AM.
+        Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-md7zqu\\cmTC_2864b.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_2864b.dir\\Debug\\".
+          Creating directory "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-md7zqu\\Debug\\".
+          Creating directory "cmTC_2864b.dir\\Debug\\cmTC_2864b.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_2864b.dir\\Debug\\cmTC_2864b.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2864b.dir\\Debug\\\\" /Fd"cmTC_2864b.dir\\Debug\\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x86
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          
+          CMakeCCompilerABI.c
+          cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2864b.dir\\Debug\\\\" /Fd"cmTC_2864b.dir\\Debug\\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+          
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-md7zqu\\Debug\\cmTC_2864b.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-md7zqu/Debug/cmTC_2864b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-md7zqu/Debug/cmTC_2864b.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_2864b.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_2864b.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-md7zqu\\Debug\\cmTC_2864b.exe
+          cmTC_2864b.vcxproj -> C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-md7zqu/Debug/cmTC_2864b.pdb (Full PDB)
+        FinalizeBuildStatus:
+          Deleting file "cmTC_2864b.dir\\Debug\\cmTC_2864b.tlog\\unsuccessfulbuild".
+          Touching "cmTC_2864b.dir\\Debug\\cmTC_2864b.tlog\\cmTC_2864b.lastbuildstate".
+        Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-md7zqu\\cmTC_2864b.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.64
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-k4hqg8"
+      binary: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-k4hqg8"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-k4hqg8'
+        
+        Run Build Command(s): "C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" cmTC_bd7b9.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=14.0 /v:n
+        Microsoft (R) Build Engine version 14.0.25420.1
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 2023-08-15 12:33:07 AM.
+        Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k4hqg8\\cmTC_bd7b9.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_bd7b9.dir\\Debug\\".
+          Creating directory "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k4hqg8\\Debug\\".
+          Creating directory "cmTC_bd7b9.dir\\Debug\\cmTC_bd7b9.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_bd7b9.dir\\Debug\\cmTC_bd7b9.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_bd7b9.dir\\Debug\\\\" /Fd"cmTC_bd7b9.dir\\Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x86
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          
+          CMakeCXXCompilerABI.cpp
+          cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_bd7b9.dir\\Debug\\\\" /Fd"cmTC_bd7b9.dir\\Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+          
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k4hqg8\\Debug\\cmTC_bd7b9.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-k4hqg8/Debug/cmTC_bd7b9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-k4hqg8/Debug/cmTC_bd7b9.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_bd7b9.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_bd7b9.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k4hqg8\\Debug\\cmTC_bd7b9.exe
+          cmTC_bd7b9.vcxproj -> C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-k4hqg8/Debug/cmTC_bd7b9.pdb (Full PDB)
+        FinalizeBuildStatus:
+          Deleting file "cmTC_bd7b9.dir\\Debug\\cmTC_bd7b9.tlog\\unsuccessfulbuild".
+          Touching "cmTC_bd7b9.dir\\Debug\\cmTC_bd7b9.tlog\\cmTC_bd7b9.lastbuildstate".
+        Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k4hqg8\\cmTC_bd7b9.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.60
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/Internal/FeatureTesting.cmake:34 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/Compiler/MSVC-CXX.cmake:77 (_record_compiler_features)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompileFeatures.cmake:70 (cmake_record_cxx_compile_features)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:70 (CMAKE_DETERMINE_COMPILE_FEATURES)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compile features"
+    directories:
+      source: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-moej2x"
+      binary: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-moej2x"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "CMAKE_CXX_FEATURE_TEST"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-moej2x'
+        
+        Run Build Command(s): "C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" cmTC_f8337.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=14.0 /v:n
+        Microsoft (R) Build Engine version 14.0.25420.1
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 2023-08-15 12:33:07 AM.
+        Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-moej2x\\cmTC_f8337.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_f8337.dir\\Debug\\".
+          Creating directory "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-moej2x\\Debug\\".
+          Creating directory "cmTC_f8337.dir\\Debug\\cmTC_f8337.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_f8337.dir\\Debug\\cmTC_f8337.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_f8337.dir\\Debug\\\\" /Fd"cmTC_f8337.dir\\Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-moej2x\\feature_tests.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x86
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          
+          feature_tests.cxx
+          cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_f8337.dir\\Debug\\\\" /Fd"cmTC_f8337.dir\\Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-moej2x\\feature_tests.cxx"
+          
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-moej2x\\Debug\\cmTC_f8337.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-moej2x/Debug/cmTC_f8337.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-moej2x/Debug/cmTC_f8337.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_f8337.dir\\Debug\\feature_tests.obj
+          cmTC_f8337.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-moej2x\\Debug\\cmTC_f8337.exe
+          cmTC_f8337.vcxproj -> C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-moej2x/Debug/cmTC_f8337.pdb (Full PDB)
+        FinalizeBuildStatus:
+          Deleting file "cmTC_f8337.dir\\Debug\\cmTC_f8337.tlog\\unsuccessfulbuild".
+          Touching "cmTC_f8337.dir\\Debug\\cmTC_f8337.tlog\\cmTC_f8337.lastbuildstate".
+        Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-moej2x\\cmTC_f8337.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.70
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Windows - 10.0.22000 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Microsoft (R) Build Engine version 14.0.25420.1
+      Copyright (C) Microsoft Corporation. All rights reserved.
+      
+      Build started 2023-08-15 12:38:13 AM.
+      Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /nologo /W0 /WX- /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc140.pdb" /Gd /TC /analyze- /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdC\\.\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.46
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/3.27.2/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Microsoft (R) Build Engine version 14.0.25420.1
+      Copyright (C) Microsoft Corporation. All rights reserved.
+      
+      Build started 2023-08-15 12:38:14 AM.
+      Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /nologo /W0 /WX- /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X86 /SAFESEH Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdCXX\\.\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.46
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/3.27.2/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-a8kdc0"
+      binary: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-a8kdc0"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-a8kdc0'
+        
+        Run Build Command(s): "C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" cmTC_977ba.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=14.0 /v:n
+        Microsoft (R) Build Engine version 14.0.25420.1
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 2023-08-15 12:38:15 AM.
+        Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a8kdc0\\cmTC_977ba.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_977ba.dir\\Debug\\".
+          Creating directory "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a8kdc0\\Debug\\".
+          Creating directory "cmTC_977ba.dir\\Debug\\cmTC_977ba.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_977ba.dir\\Debug\\cmTC_977ba.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_977ba.dir\\Debug\\\\" /Fd"cmTC_977ba.dir\\Debug\\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x86
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          
+          CMakeCCompilerABI.c
+          cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_977ba.dir\\Debug\\\\" /Fd"cmTC_977ba.dir\\Debug\\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+          
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a8kdc0\\Debug\\cmTC_977ba.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-a8kdc0/Debug/cmTC_977ba.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-a8kdc0/Debug/cmTC_977ba.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_977ba.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_977ba.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a8kdc0\\Debug\\cmTC_977ba.exe
+          cmTC_977ba.vcxproj -> C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-a8kdc0/Debug/cmTC_977ba.pdb (Full PDB)
+        FinalizeBuildStatus:
+          Deleting file "cmTC_977ba.dir\\Debug\\cmTC_977ba.tlog\\unsuccessfulbuild".
+          Touching "cmTC_977ba.dir\\Debug\\cmTC_977ba.tlog\\cmTC_977ba.lastbuildstate".
+        Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a8kdc0\\cmTC_977ba.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.60
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-akktxm"
+      binary: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-akktxm"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-akktxm'
+        
+        Run Build Command(s): "C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" cmTC_6a229.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=14.0 /v:n
+        Microsoft (R) Build Engine version 14.0.25420.1
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 2023-08-15 12:38:15 AM.
+        Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-akktxm\\cmTC_6a229.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_6a229.dir\\Debug\\".
+          Creating directory "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-akktxm\\Debug\\".
+          Creating directory "cmTC_6a229.dir\\Debug\\cmTC_6a229.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_6a229.dir\\Debug\\cmTC_6a229.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_6a229.dir\\Debug\\\\" /Fd"cmTC_6a229.dir\\Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x86
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          
+          CMakeCXXCompilerABI.cpp
+          cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_6a229.dir\\Debug\\\\" /Fd"cmTC_6a229.dir\\Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+          
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-akktxm\\Debug\\cmTC_6a229.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-akktxm/Debug/cmTC_6a229.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-akktxm/Debug/cmTC_6a229.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_6a229.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_6a229.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-akktxm\\Debug\\cmTC_6a229.exe
+          cmTC_6a229.vcxproj -> C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-akktxm/Debug/cmTC_6a229.pdb (Full PDB)
+        FinalizeBuildStatus:
+          Deleting file "cmTC_6a229.dir\\Debug\\cmTC_6a229.tlog\\unsuccessfulbuild".
+          Touching "cmTC_6a229.dir\\Debug\\cmTC_6a229.tlog\\cmTC_6a229.lastbuildstate".
+        Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-akktxm\\cmTC_6a229.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.63
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/Internal/FeatureTesting.cmake:34 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/Compiler/MSVC-CXX.cmake:77 (_record_compiler_features)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompileFeatures.cmake:70 (cmake_record_cxx_compile_features)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:70 (CMAKE_DETERMINE_COMPILE_FEATURES)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compile features"
+    directories:
+      source: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-mjli1e"
+      binary: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-mjli1e"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "CMAKE_CXX_FEATURE_TEST"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-mjli1e'
+        
+        Run Build Command(s): "C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" cmTC_7b85a.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=14.0 /v:n
+        Microsoft (R) Build Engine version 14.0.25420.1
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 2023-08-15 12:38:16 AM.
+        Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mjli1e\\cmTC_7b85a.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_7b85a.dir\\Debug\\".
+          Creating directory "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mjli1e\\Debug\\".
+          Creating directory "cmTC_7b85a.dir\\Debug\\cmTC_7b85a.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_7b85a.dir\\Debug\\cmTC_7b85a.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_7b85a.dir\\Debug\\\\" /Fd"cmTC_7b85a.dir\\Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mjli1e\\feature_tests.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x86
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          
+          feature_tests.cxx
+          cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_7b85a.dir\\Debug\\\\" /Fd"cmTC_7b85a.dir\\Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mjli1e\\feature_tests.cxx"
+          
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mjli1e\\Debug\\cmTC_7b85a.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-mjli1e/Debug/cmTC_7b85a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-mjli1e/Debug/cmTC_7b85a.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_7b85a.dir\\Debug\\feature_tests.obj
+          cmTC_7b85a.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mjli1e\\Debug\\cmTC_7b85a.exe
+          cmTC_7b85a.vcxproj -> C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-mjli1e/Debug/cmTC_7b85a.pdb (Full PDB)
+        FinalizeBuildStatus:
+          Deleting file "cmTC_7b85a.dir\\Debug\\cmTC_7b85a.tlog\\unsuccessfulbuild".
+          Touching "cmTC_7b85a.dir\\Debug\\cmTC_7b85a.tlog\\cmTC_7b85a.lastbuildstate".
+        Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mjli1e\\cmTC_7b85a.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.61
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.22000 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Microsoft (R) Build Engine version 14.0.25420.1
+      Copyright (C) Microsoft Corporation. All rights reserved.
+      
+      Build started 2023-08-15 12:41:09 AM.
+      Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /nologo /W0 /WX- /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc140.pdb" /Gd /TC /analyze- /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdC\\.\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.48
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/3.27.2/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Microsoft (R) Build Engine version 14.0.25420.1
+      Copyright (C) Microsoft Corporation. All rights reserved.
+      
+      Build started 2023-08-15 12:41:09 AM.
+      Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /nologo /W0 /WX- /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X86 /SAFESEH Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdCXX\\.\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\3.27.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.45
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/3.27.2/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-eh5yo4"
+      binary: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-eh5yo4"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-eh5yo4'
+        
+        Run Build Command(s): "C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" cmTC_b0691.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=14.0 /v:n
+        Microsoft (R) Build Engine version 14.0.25420.1
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 2023-08-15 12:41:10 AM.
+        Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eh5yo4\\cmTC_b0691.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_b0691.dir\\Debug\\".
+          Creating directory "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eh5yo4\\Debug\\".
+          Creating directory "cmTC_b0691.dir\\Debug\\cmTC_b0691.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_b0691.dir\\Debug\\cmTC_b0691.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b0691.dir\\Debug\\\\" /Fd"cmTC_b0691.dir\\Debug\\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x86
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          
+          CMakeCCompilerABI.c
+          cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b0691.dir\\Debug\\\\" /Fd"cmTC_b0691.dir\\Debug\\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+          
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eh5yo4\\Debug\\cmTC_b0691.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-eh5yo4/Debug/cmTC_b0691.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-eh5yo4/Debug/cmTC_b0691.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_b0691.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_b0691.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eh5yo4\\Debug\\cmTC_b0691.exe
+          cmTC_b0691.vcxproj -> C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-eh5yo4/Debug/cmTC_b0691.pdb (Full PDB)
+        FinalizeBuildStatus:
+          Deleting file "cmTC_b0691.dir\\Debug\\cmTC_b0691.tlog\\unsuccessfulbuild".
+          Touching "cmTC_b0691.dir\\Debug\\cmTC_b0691.tlog\\cmTC_b0691.lastbuildstate".
+        Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eh5yo4\\cmTC_b0691.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.57
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-2bicqb"
+      binary: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-2bicqb"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-2bicqb'
+        
+        Run Build Command(s): "C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" cmTC_58072.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=14.0 /v:n
+        Microsoft (R) Build Engine version 14.0.25420.1
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 2023-08-15 12:41:11 AM.
+        Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2bicqb\\cmTC_58072.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_58072.dir\\Debug\\".
+          Creating directory "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2bicqb\\Debug\\".
+          Creating directory "cmTC_58072.dir\\Debug\\cmTC_58072.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_58072.dir\\Debug\\cmTC_58072.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_58072.dir\\Debug\\\\" /Fd"cmTC_58072.dir\\Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x86
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          
+          CMakeCXXCompilerABI.cpp
+          cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_58072.dir\\Debug\\\\" /Fd"cmTC_58072.dir\\Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+          
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2bicqb\\Debug\\cmTC_58072.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-2bicqb/Debug/cmTC_58072.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-2bicqb/Debug/cmTC_58072.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_58072.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_58072.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2bicqb\\Debug\\cmTC_58072.exe
+          cmTC_58072.vcxproj -> C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-2bicqb/Debug/cmTC_58072.pdb (Full PDB)
+        FinalizeBuildStatus:
+          Deleting file "cmTC_58072.dir\\Debug\\cmTC_58072.tlog\\unsuccessfulbuild".
+          Touching "cmTC_58072.dir\\Debug\\cmTC_58072.tlog\\cmTC_58072.lastbuildstate".
+        Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2bicqb\\cmTC_58072.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.58
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/Internal/FeatureTesting.cmake:34 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/Compiler/MSVC-CXX.cmake:77 (_record_compiler_features)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompileFeatures.cmake:70 (cmake_record_cxx_compile_features)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:70 (CMAKE_DETERMINE_COMPILE_FEATURES)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compile features"
+    directories:
+      source: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-auhuzj"
+      binary: "C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-auhuzj"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "CMAKE_CXX_FEATURE_TEST"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-auhuzj'
+        
+        Run Build Command(s): "C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" cmTC_7eee8.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=14.0 /v:n
+        Microsoft (R) Build Engine version 14.0.25420.1
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 2023-08-15 12:41:11 AM.
+        Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-auhuzj\\cmTC_7eee8.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_7eee8.dir\\Debug\\".
+          Creating directory "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-auhuzj\\Debug\\".
+          Creating directory "cmTC_7eee8.dir\\Debug\\cmTC_7eee8.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_7eee8.dir\\Debug\\cmTC_7eee8.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_7eee8.dir\\Debug\\\\" /Fd"cmTC_7eee8.dir\\Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-auhuzj\\feature_tests.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x86
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          
+          feature_tests.cxx
+          cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_7eee8.dir\\Debug\\\\" /Fd"cmTC_7eee8.dir\\Debug\\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-auhuzj\\feature_tests.cxx"
+          
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\bin\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-auhuzj\\Debug\\cmTC_7eee8.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-auhuzj/Debug/cmTC_7eee8.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-auhuzj/Debug/cmTC_7eee8.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_7eee8.dir\\Debug\\feature_tests.obj
+          cmTC_7eee8.vcxproj -> C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-auhuzj\\Debug\\cmTC_7eee8.exe
+          cmTC_7eee8.vcxproj -> C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/CMakeScratch/TryCompile-auhuzj/Debug/cmTC_7eee8.pdb (Full PDB)
+        FinalizeBuildStatus:
+          Deleting file "cmTC_7eee8.dir\\Debug\\cmTC_7eee8.tlog\\unsuccessfulbuild".
+          Touching "cmTC_7eee8.dir\\Debug\\cmTC_7eee8.tlog\\cmTC_7eee8.lastbuildstate".
+        Done Building Project "C:\\Users\\Arian\\OneDrive\\Documents\\GitHub\\AP-Chess\\build\\CMakeFiles\\CMakeScratch\\TryCompile-auhuzj\\cmTC_7eee8.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.64
+        
+      exitCode: 0
+...

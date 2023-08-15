@@ -1,0 +1,37 @@
+﻿  Building Custom Rule C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/CMakeLists.txt
+  main.cpp
+  piece.cpp
+  kings.cpp
+  board.cpp
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(107): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(240): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(284): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(347): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(376): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(382): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(404): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(435): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(441): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(465): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(488): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(501): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(573): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(594): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(810): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(865): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(880): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(891): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(902): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(910): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(921): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(929): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(940): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(948): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(959): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(967): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(978): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(986): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(1197): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\src\board.cpp(1321): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  chess.vcxproj -> C:\Users\Arian\OneDrive\Documents\GitHub\AP-Chess\build\Release\chess.exe

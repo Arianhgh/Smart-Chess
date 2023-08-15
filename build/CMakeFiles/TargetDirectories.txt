@@ -1,0 +1,3 @@
+C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/chess.dir
+C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Arian/OneDrive/Documents/GitHub/AP-Chess/build/CMakeFiles/ZERO_CHECK.dir
